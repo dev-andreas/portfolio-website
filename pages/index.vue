@@ -97,6 +97,20 @@
             </div>
             <div class="framework">
               <img
+                src="~/assets/images/frameworks/node.svg"
+                alt="Node.js"
+              />
+              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Node.js</p>
+            </div>
+            <div class="framework">
+              <img
+                src="~/assets/images/frameworks/django.svg"
+                alt="Django"
+              />
+              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Django</p>
+            </div>
+            <div class="framework">
+              <img
                 src="~/assets/images/frameworks/pgsql.svg"
                 alt="PostgreSQL"
               />
@@ -108,13 +122,6 @@
                 alt="PostgreSQL"
               />
               <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">MySQL</p>
-            </div>
-            <div class="framework">
-              <img
-                src="~/assets/images/frameworks/django.svg"
-                alt="Django"
-              />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Django</p>
             </div>
             <div class="framework">
               <img
@@ -166,7 +173,7 @@
     <section class="min-h-screen flex flex-col items-center justify-between" id="projects">
       <div class="flex flex-col items-center">
         <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-          <h2 class="text-4xl font-light border-b border-font-dark pb-1 text-center">Projects</h2>
+          <h2 class="text-4xl font-light border-b border-font-dark pb-1 text-center">Projects / Work</h2>
         </IntersectionAnimation>
         <IntersectionAnimation class="mt-10" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
         <p class="font-bold text-3xl text-center standard-grid-width">Projects I have completed or am still working on:</p>
@@ -175,7 +182,7 @@
       <div class="flex flex-col items-center mt-10 sm:mt-40 md:mt-0">
         <p class="mb-10">Touch a box to learn more</p>
         <div id="projects" class="flex flex-wrap items-center justify-center standard-grid-width gap-8">
-          <ProjectBox :title="'PERI Smart Factory'" :alt="'PERI'" :index="1" :logo="periImage">
+          <ProjectBox :title="'PERI Smart Factory'" :alt="'Working Student'" :index="1" :logo="hatImage">
             Working Student / Digitalization and automation of quality control.
           </ProjectBox>
           <ProjectBox :title="'UltraTEC Website'" :alt="'UltraTEC Website'" :index="2" :logo="ultratecLogo">
@@ -213,8 +220,8 @@
 </template>
 
 <script setup>
-import periImage from "~/assets/images/external/peri.png";
 import ultratecLogo from "~/assets/images/external/ultratec_logo.svg";
+import hatImage from "~/assets/images/hat.svg";
 import cryptoeditor from "~/assets/images/external/cryptoeditor.svg";
 import pollapp from "~/assets/images/external/pollapp.svg";
 import { storeToRefs } from "pinia";
@@ -224,9 +231,9 @@ const { showIcon } = storeToRefs(useNavbarStore());
 
 const languages = reactive([
   { name: "Java SE", votes: 90 },
-  { name: "Python", votes: 80 },
-  { name: "JavaScript", votes: 60 },
-  { name: "PHP", votes: 50 },
+  { name: "JavaScript", votes: 70 },
+  { name: "Python", votes: 60 },
+  { name: "PHP", votes: 70 },
   { name: "SQL", votes: 60 },
 ]);
 const showArrow = ref(true);

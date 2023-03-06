@@ -38,6 +38,7 @@ const { currentProject } = storeToRefs(useProjectsStore());
 const props = defineProps({
   logo: {
     type: String,
+    default: null
   },
   alt: {
     type: String,

@@ -9,10 +9,14 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Portfolio from Andreas Gerasimow.' }
       ],
     },
-
-
     pageTransition: {
       name: 'fade',
+    }
+  },
+  runtimeConfig: {
+    public: {
+      apiUrl: "http://localhost:5000/mail",
+      recaptchaPublic: process.env.RECAPTCHA_PUBLIC
     }
   },
   build: {
@@ -25,6 +29,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  target: 'static',
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
   css: ["~/assets/css/style.css"],
 })

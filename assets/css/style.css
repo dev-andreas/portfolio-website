@@ -97,3 +97,17 @@ body {
   transform: translateX(10px);
   opacity: 0;
 }
+
+.slide-left-right {
+    animation: left-right 1s infinite;
+}
+
+@keyframes left-right {
+    0% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+}
+
+.grecaptcha-badge { 
+    visibility: hidden;
+}
