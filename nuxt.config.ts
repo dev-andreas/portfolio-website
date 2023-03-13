@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiUrl: "http://localhost:5000/mail",
+      apiUrl: "https://mail.andreasgera.de/",
       recaptchaPublic: process.env.RECAPTCHA_PUBLIC
     }
   },
