@@ -25,7 +25,7 @@
 
             <!-- Links -->
             <li v-for="(link, index) in props.links" :key="index" class="my-2">
-              <a v-if="link.jump" :href="link.route"><p class="p-2 bgg rounded-sm border border-font-dark text-center w-72 bg-backg-light flat-shadow">{{ link.name }}</p></a>
+              <a v-if="link.jump" :href="link.route"><p class="p-2 bgg rounded-md border border-font-dark text-center w-72 bg-backg-light flat-shadow">{{ link.name }}</p></a>
               <NuxtLink v-else-if="!link.subdirs" :to="link.route">
                 <p class="p-2 bgg rounded-sm border text-center w-64" @click="open = false">
                   {{ link.name }}
