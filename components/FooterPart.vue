@@ -10,9 +10,6 @@
       <a href="https://www.linkedin.com/in/andreas-gerasimow-341a551b2/" target="_blank" rel="noopener">
         <img src="~/assets/images/social_nets/linkedin.svg" alt="linkedin" class="w-12 flat-shadow-sm" />
       </a>
-      <a href="https://www.instagram.com/real_gera_/" target="_blank" rel="noopener noreferrer">
-        <img src="~/assets/images/social_nets/instagram.svg" alt="Instagram Account" class="w-12 h-12 flat-shadow-sm">
-      </a>
     </div>
   </footer>
 </template>

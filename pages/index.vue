@@ -52,9 +52,6 @@
             <a href="https://github.com/dev-andreas" target="_blank" rel="noopener noreferrer">
               <img src="~/assets/images/social_nets/github.svg" alt="GitHub Account" class="w-12 h-12 mr-4 flat-shadow-sm">
             </a>
-            <a href="https://www.instagram.com/real_gera_/" target="_blank" rel="noopener noreferrer">
-              <img src="~/assets/images/social_nets/instagram.svg" alt="Instagram Account" class="w-12 h-12 flat-shadow-sm">
-            </a>
           </span>
         </IntersectionAnimation>
       </div>
