@@ -3,7 +3,7 @@
     <IntersectionObserver @intersects="setArrow"></IntersectionObserver>
     <header class="flex flex-col justify-between items-center h-screen">
       <span></span>
-      <div class="flex flex-col justify-center items-center flat-shadow mt-10">
+      <div class="flex flex-col justify-center items-center flat-shadow-sm mt-10">
         <IntersectionAnimation startingClass="opacity-0 translate-y-3 blur-sm" endingClass="opacity-100 translate-y-0 blur-none">
           <img
             src="~assets/images/lightbulb_logo_black.svg"
@@ -23,7 +23,7 @@
     </header>
     <section class="flex flex-col items-center justify-between" id="about">
       <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-        <h2 class="text-4xl font-light border-b border-font-dark pb-1 text-center">About me</h2>
+        <h2 class="text-4xl font-bold text-center flat-shadow-sm">About me</h2>
       </IntersectionAnimation>
       <div class="min-h-screen standard-grid-width place-items-center grid grid-cols-1 lg:grid-cols-3 gap-10">
         <IntersectionAnimation 
@@ -31,7 +31,7 @@
           startingClass="opacity-0 -translate-x-5" 
           endingClass="opacity-100 translate-x-0">
           <img src="~/assets/images/andreas_gerasimow.jpg" alt="Andreas Gerasimow" class="w-72 h-72 xl:w-80 xl:h-80 rounded-md shadow-xl">
-          <div class="pl-5 py-2 border-l border-font-dark mt-5">
+          <div class="pl-5 py-2 border-l border-font-dark mt-10 lg:mt-5">
             <p class="font-bold">Andreas Gerasimow</p>
             <p class="">Ulm, Baden-Württemberg, Germany</p>
             <p class="">andreas.gerasimow@uni-ulm.de</p>
@@ -47,13 +47,13 @@
           </p>
           <span class="flex mt-10">
             <a href="https://www.linkedin.com/in/andreas-gerasimow-341a551b2/" target="_blank" rel="noopener noreferrer">
-              <img src="~/assets/images/social_nets/linkedin.svg" alt="LinkedIn Account" class="w-12 h-12 mr-4 flat-shadow">
+              <img src="~/assets/images/social_nets/linkedin.svg" alt="LinkedIn Account" class="w-12 h-12 mr-4 flat-shadow-sm">
             </a>
             <a href="https://github.com/dev-andreas" target="_blank" rel="noopener noreferrer">
-              <img src="~/assets/images/social_nets/github.svg" alt="GitHub Account" class="w-12 h-12 mr-4 flat-shadow">
+              <img src="~/assets/images/social_nets/github.svg" alt="GitHub Account" class="w-12 h-12 mr-4 flat-shadow-sm">
             </a>
             <a href="https://www.instagram.com/real_gera_/" target="_blank" rel="noopener noreferrer">
-              <img src="~/assets/images/social_nets/instagram.svg" alt="Instagram Account" class="w-12 h-12 flat-shadow">
+              <img src="~/assets/images/social_nets/instagram.svg" alt="Instagram Account" class="w-12 h-12 flat-shadow-sm">
             </a>
           </span>
         </IntersectionAnimation>
@@ -63,16 +63,16 @@
     <section class="min-h-screen flex flex-col items-center justify-between" id="technologies">
       <div class="flex flex-col items-center">
         <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-          <h2 class="text-4xl font-light border-b border-font-dark pb-1 text-center">Technologies</h2>
+          <h2 class="text-4xl font-bold text-center flat-shadow-sm">Technologies</h2>
         </IntersectionAnimation>
         <IntersectionAnimation class="mt-10" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-          <p class="font-bold text-3xl text-center standard-grid-width">This is what I use for development:</p>
+          <p class="text-3xl text-center standard-grid-width">This is what I use for development:</p>
         </IntersectionAnimation>
       </div>
       <div class="flex flex-col items-center sm:mt-40 xl:mt-0">
       <div class="grid grid-cols-1 xl:grid-cols-2 place-items-center standard-grid-width sm:gap-20 lg:gap-40 xl:gap-0">
           <IntersectionAnimation 
-            class="flex flex-col justify-center scale-60 xs:scale-70 sm:scale-100 lg:scale-125 xl:scale-100"
+            class="flex flex-col justify-center scale-60 xs:scale-70 sm:scale-100 lg:scale-125 xl:scale-100 -mt-5 lg:mt-0"
             startingClass="opacity-0 -translate-x-5" 
             endingClass="opacity-100 translate-x-0">
             <StatGraph :items="languages" />
@@ -104,17 +104,17 @@
             </div>
             <div class="framework">
               <img
+                src="~/assets/images/frameworks/tailwindcss.svg"
+                alt="Tailwind CSS"
+              />
+              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Tailwindcss</p>
+            </div>
+            <div class="framework">
+              <img
                 src="~/assets/images/frameworks/django.svg"
                 alt="Django"
               />
               <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Django</p>
-            </div>
-            <div class="framework">
-              <img
-                src="~/assets/images/frameworks/pgsql.svg"
-                alt="PostgreSQL"
-              />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">pgSQL</p>
             </div>
             <div class="framework">
               <img
@@ -125,10 +125,10 @@
             </div>
             <div class="framework">
               <img
-                src="~/assets/images/frameworks/tailwindcss.svg"
-                alt="Tailwind CSS"
+                src="~/assets/images/frameworks/pgsql.svg"
+                alt="PostgreSQL"
               />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Tailwindcss</p>
+              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">pgSQL</p>
             </div>
             <div class="framework">
               <img
@@ -173,10 +173,10 @@
     <section class="min-h-screen flex flex-col items-center justify-between" id="projects">
       <div class="flex flex-col items-center">
         <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-          <h2 class="text-4xl font-light border-b border-font-dark pb-1 text-center">Projects / Work</h2>
+          <h2 class="text-4xl font-bold text-center flat-shadow-sm">Projects / Work</h2>
         </IntersectionAnimation>
         <IntersectionAnimation class="mt-10" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-        <p class="font-bold text-3xl text-center standard-grid-width">Projects I have completed or am still working on:</p>
+        <p class="text-3xl text-center standard-grid-width">Projects I have completed or am still working on:</p>
         </IntersectionAnimation>
       </div>
       <div class="flex flex-col items-center mt-10 sm:mt-40 md:mt-0">
@@ -200,10 +200,10 @@
     <section class="min-h-screen flex flex-col items-center justify-between" id="contact">
         <div class="flex flex-col items-center">
           <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-            <h2 class="text-4xl font-light border-b border-font-dark pb-1 text-center">Contact</h2>
+            <h2 class="text-4xl font-bold text-center flat-shadow-sm">Contact</h2>
           </IntersectionAnimation>
           <IntersectionAnimation class="mt-10" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-            <p class="font-bold text-3xl text-center standard-grid-width">You can contact me per E-Mail:</p>
+            <p class="text-3xl text-center standard-grid-width">You can contact me per E-Mail:</p>
           </IntersectionAnimation>
         </div>
         <div class="grid md:grid-cols-2 gap-8 standard-grid-width place-items-center mt-20 md:mt-0">
@@ -230,11 +230,11 @@ import { useNavbarStore } from "~/stores/stores.js";
 const { showIcon } = storeToRefs(useNavbarStore());
 
 const languages = reactive([
-  { name: "Java SE", votes: 90 },
-  { name: "JavaScript", votes: 70 },
+  { name: "Java/Kotlin", votes: 90 },
+  { name: "JavaScript/TypeScript", votes: 70 },
   { name: "Python", votes: 60 },
-  { name: "PHP", votes: 70 },
-  { name: "SQL", votes: 60 },
+  { name: "PHP", votes: 60 },
+  { name: "SQL", votes: 40 },
 ]);
 const showArrow = ref(true);
 

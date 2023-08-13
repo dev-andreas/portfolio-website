@@ -23,15 +23,15 @@ body {
 }
 
 .btn-primary {
-    @apply btn font-bold border border-font-dark rounded-sm hover:bg-font-dark hover:text-white bg-backg-light flat-shadow transition ease-out duration-200;
+    @apply btn font-bold border border-font-dark rounded hover:bg-font-dark hover:text-white bg-backg-light flat-shadow transition ease-out duration-200;
 }
 
 .inpt {
-    @apply border border-font-dark p-1 bg-backg-light rounded-sm transition ease-out duration-200;
+    @apply border border-font-dark p-1 bg-backg-light rounded transition ease-out duration-200;
 }
 
 .tbox {
-    @apply border border-font-dark p-1 bg-backg-light rounded-sm transition ease-out duration-200;
+    @apply border border-font-dark p-1 bg-backg-light rounded transition ease-out duration-200;
 }
 
 .standard-grid-width {

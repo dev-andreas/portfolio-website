@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex justify-between bg-backg-light">
+    <div class="flex justify-between bg-backg-light backdrop-blur-lg " :class="{ 'bg-opacity-70' : !open }">
       <NuxtLink to="/" class="py-3 px-3 transition-all duration-300 flat-shadow-sm" :class="{ 'opacity-0 -translate-y-2 blur-md' : !showIcon }" @click="open = false">
         <img src="../../assets/images/lightbulb_logo_black.svg" alt="ultratec logo" class="h-8" />
       </NuxtLink>
@@ -8,11 +8,11 @@
 
         <!-- Burger -->
         <div class="flex flex-col items-end justify-center mr-5" @click="toggle">
-          <div class="w-7 h-1 my-0.5 transition ease-out duration-300 transform bg-font-dark"
+          <div class="w-7 h-1 my-0.5 transition ease-out duration-300 transform bg-font-dark rounded-full"
             :class="[open ? '-rotate-45 translate-y-2' : 'rotate-0']"></div>
-          <div class="w-6 h-1 my-0.5 transition ease-out duration-300 bg-font-dark"
+          <div class="w-6 h-1 my-0.5 transition ease-out duration-300 bg-font-dark rounded-full"
             :class="[open ? 'opacity-0' : 'opacity-100']"></div>
-          <div class="h-1 my-0.5 transition ease-out duration-500 transform bg-font-dark"
+          <div class="h-1 my-0.5 transition ease-out duration-500 transform bg-font-dark rounded-full"
             :class="[open ? 'rotate-45 -translate-y-2 w-7' : 'rotate-0 w-5']"></div>
         </div>
 

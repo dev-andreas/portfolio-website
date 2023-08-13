@@ -13,7 +13,7 @@
         </p>
         <div class="text-center flex flat-shadow">
             <div
-              class="h-8 border border-l-4 border-font-dark bg-backg-light bgg"
+              class="h-8 border border-l-4 border-font-dark bg-backg-light bgg rounded-md"
               :style="{
                 width: (item.votes / 100) * 35 + 'rem',
               }"

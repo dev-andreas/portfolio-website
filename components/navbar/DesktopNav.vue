@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-backg-light flex justify-center items-center">
+  <div class="bg-backg-light bg-opacity-70 backdrop-blur-lg flex justify-center items-center">
     <NuxtLink to="/" class="py-3 px-3 transition-all duration-300 flat-shadow-sm" :class="{ 'opacity-0 -translate-y-1 blur-md' : !showIcon }">
       <img
         src="../../assets/images/lightbulb_logo_black.svg"

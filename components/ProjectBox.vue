@@ -1,6 +1,6 @@
 <template>
     <IntersectionAnimation
-      class="p-5 w-80 h-60 flex flex-col justify-center items-center border border-font-dark bg-backg-light flat-shadow rounded-sm"
+      class="p-5 w-80 h-60 flex flex-col justify-center items-center border border-font-dark bg-backg-light flat-shadow rounded-md"
       startingClass="opacity-0 translate-y-10"
       endingClass="opacity-100 translate-y-0"
     >

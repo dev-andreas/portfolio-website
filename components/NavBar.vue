@@ -30,5 +30,4 @@ function resize() {
 
 </script>
 
-<style>
-</style>
+<style></style>
