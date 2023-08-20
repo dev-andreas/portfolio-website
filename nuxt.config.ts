@@ -1,5 +1,6 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: true },
   app: {
     head: {
       charset: 'utf-8',
@@ -19,17 +20,14 @@ export default defineNuxtConfig({
       recaptchaPublic: process.env.RECAPTCHA_PUBLIC
     }
   },
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
-  target: 'static',
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
-  css: ["~/assets/css/style.css"],
+  modules: [
+    '@pinia/nuxt',
+  ],
 })
