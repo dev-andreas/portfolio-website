@@ -32,8 +32,8 @@
           jump: true,
         },
         {
-          name: "Projects",
-          route: "#projects",
+          name: "Experience",
+          route: "#experience",
           jump: true,
         },
         {

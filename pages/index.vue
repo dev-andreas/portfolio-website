@@ -37,7 +37,7 @@
           startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
           <p class="text-2xl text-center">
             Hi, I'm Andreas and I study computer science at Ulm University in Germany.
-            I am interested in web development and almost everything else that has to do with computers.
+            I am interested in web development and cybersecurity.
           </p>
           <span class="flex mt-10 gap-4">
             <a href="https://github.com/dev-andreas" target="_blank" rel="noopener noreferrer">
@@ -121,32 +121,33 @@
       </div>
       <span class="mb-40"></span>
     </section>
-    <section class="min-h-screen flex flex-col items-center justify-between" id="projects">
+    <section class="min-h-screen flex flex-col items-center justify-between" id="experience">
       <div class="flex flex-col items-center">
         <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <h2 class="text-4xl font-bold text-center flat-shadow-sm">Projects / Work</h2>
-        </IntersectionAnimation>
-        <IntersectionAnimation class="mt-10" startingClass="opacity-0 translate-y-5"
-          endingClass="opacity-100 translate-y-0">
-          <p class="text-3xl text-center standard-grid-width">Projects I have completed or am still working on:</p>
+          <h2 class="text-4xl font-bold text-center flat-shadow-sm">Professional Experience & Education</h2>
         </IntersectionAnimation>
       </div>
-      <div class="flex flex-col items-center mt-10 sm:mt-40 md:mt-0">
-        <p class="mb-10">Touch a box to learn more</p>
-        <div id="projects" class="flex flex-wrap items-center justify-center standard-grid-width gap-8">
-          <ProjectBox :title="'PERI Smart Factory'" :alt="'Working Student'" :index="1" :logo="hatImage">
-            Working Student / Digitalization and automation of quality control.
-          </ProjectBox>
-          <ProjectBox :title="'UltraTEC Website'" :alt="'UltraTEC Website'" :index="2" :logo="ultratecLogo">
-            Website of a start up which manufactures ultrasonic deburring machines.</ProjectBox>
-          <ProjectBox :title="'cryptoeditor'" :alt="'cryptoeditor'" :index="3" :logo="cryptoeditor">
-            A program to encrypt passwords and files.
-          </ProjectBox>
-          <ProjectBox :title="'Poll App'" :alt="'Poll App'" :index="4" :logo="pollapp">
-            A web app for anonymous surveys.
-          </ProjectBox>
-        </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 standard-grid-width gap-20 lg:gap-0 mt-10 lg:mt-0">
+        <IntersectionAnimation
+            class="flex flex-col items-center gap-10"
+            startingClass="opacity-0 -translate-x-5" endingClass="opacity-100 translate-x-0">
+          <h3 class="text-3xl text-center">Professional Experience</h3>
+          <TimeLine :items="[
+            { title: 'Student Assistant', institution: 'Ulm University', time: 'Since 2023', details: ['Programming of the framework FeatureIDE and the library FeatJAR for feature-oriented software developent.'], image: '' },
+            { title: 'Working Student', institution: 'PERI SE', time: '2022-2023', details: ['Management of a project for automatic data transmission of machine errors.', ' Development and automation of internal information systems and data transmission.'], image: '' },
+            { title: 'Freelancer', institution: 'self-employed', time: '2021-2022', details: ['Development of a website and regular maintenance for the start-up ultraTEC Innovation GmbH.'], image: '' }
+            ]"></TimeLine>
+        </IntersectionAnimation>
+        <IntersectionAnimation
+            class="flex flex-col items-center gap-10"
+            startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
+          <h3 class="text-3xl text-center">Education</h3>
+          <TimeLine :items="[
+            { title: 'BSc Computer Science', institution: 'Ulm University', time: '2021-2024', details: '', image: '' },
+            { title: 'Abitur', institution: 'Kilian-von-Steiner Schule', time: '2019-2021', details: '', image: '' }
+            ]"></TimeLine>
+        </IntersectionAnimation>
       </div>
       <span class="mb-40"></span>
     </section>
@@ -161,14 +162,15 @@
           <p class="text-3xl text-center standard-grid-width">You can contact me per E-Mail:</p>
         </IntersectionAnimation>
       </div>
-      <div class="grid md:grid-cols-2 gap-8 standard-grid-width place-items-center mt-20 md:mt-0">
+      <div class="flex flex-col gap-10 mt-20 md:mt-0">
         <IntersectionAnimation class="mt-5" startingClass="opacity-0 -translate-x-5"
           endingClass="opacity-100 translate-x-0">
           <img src="~/assets/images/mail.svg" alt="Mail" class="w-64 flat-shadow">
         </IntersectionAnimation>
-        <IntersectionAnimation class="w-full" startingClass="opacity-0 translate-x-5"
+        <IntersectionAnimation class="w-full flex flex-col gap-5 items-center" startingClass="opacity-0 translate-x-5"
           endingClass="opacity-100 translate-x-0">
-          <ContactForm />
+          <p class="font-bold">andreas.gerasimow12@gmail.com</p>
+          <a class="btn-primary" href="mailto:andreas.gerasimow12@gmail.com">Send Mail</a>
         </IntersectionAnimation>
       </div>
       <span class="mb-10 md:mb-0"></span>
@@ -177,10 +179,6 @@
 </template>
 
 <script setup>
-import ultratecLogo from "~/assets/images/external/ultratec_logo.svg";
-import hatImage from "~/assets/images/hat.svg";
-import cryptoeditor from "~/assets/images/external/cryptoeditor.svg";
-import pollapp from "~/assets/images/external/pollapp.svg";
 import { storeToRefs } from "pinia";
 import { useNavbarStore } from "~/stores/stores.js";
 

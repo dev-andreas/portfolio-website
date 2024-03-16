@@ -42,7 +42,7 @@ const runtimeConfig = useRuntimeConfig();
 
 useHead({
     script: [
-        { src: `https://www.google.com/recaptcha/api.js?render=${runtimeConfig.recaptchaPublic}` }
+        { src: `https://www.google.com/recaptcha/api.js?render=${runtimeConfig.public.recaptchaPublic}` }
     ],
 });
 
@@ -69,8 +69,8 @@ async function send() {
         loading.value = true;
         response.value = '';
         try {
-            const token = await grecaptcha.execute(runtimeConfig.recaptchaPublic, {action: 'submit'})
-            const res = await fetch(runtimeConfig.apiUrl, {
+            const token = await grecaptcha.execute(runtimeConfig.public.recaptchaPublic, {action: 'submit'})
+            const res = await fetch(runtimeConfig.public.apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
