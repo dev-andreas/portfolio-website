@@ -125,7 +125,7 @@
       <div class="flex flex-col items-center">
         <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <h2 class="text-4xl font-bold text-center flat-shadow-sm">Professional Experience & Education</h2>
+          <h2 class="text-4xl font-bold text-center flat-shadow-sm mx-5">Professional Experience & Education</h2>
         </IntersectionAnimation>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 standard-grid-width gap-20 lg:gap-0 mt-10 lg:mt-0">
