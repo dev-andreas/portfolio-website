@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex justify-between bg-backg-light backdrop-blur-lg " :class="{ 'bg-opacity-70' : !open }">
-      <NuxtLink to="/" class="py-3 px-3 transition-all duration-300 flat-shadow-sm" :class="{ 'opacity-0 -translate-y-2 blur-md' : !showIcon }" @click="open = false">
+      <NuxtLink to="/" class="py-3 px-5 transition-all duration-300 flat-shadow-sm" :class="{ 'opacity-0 -translate-y-2 blur-md' : !showIcon }" @click="open = false">
         <img src="../../assets/images/lightbulb_logo_black.svg" alt="andreas gerasimow logo" class="h-8" />
       </NuxtLink>
       <div class="flex items-center justify-center">
