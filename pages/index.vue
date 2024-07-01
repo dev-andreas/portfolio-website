@@ -19,8 +19,8 @@
       </div>
     </header>
     <section class="flex flex-col items-center justify-between" id="about">
-      <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-        <h2 class="text-4xl font-bold text-center flat-shadow-sm">About me</h2>
+      <IntersectionAnimation class="mt-15 mb-5" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center flat-shadow-sm">About me</h2>
       </IntersectionAnimation>
       <div class="min-h-screen standard-grid-width place-items-center grid grid-cols-1 lg:grid-cols-3 gap-10">
         <IntersectionAnimation class="flex flex-col justify-center self-end lg:self-center"
@@ -35,7 +35,7 @@
         </IntersectionAnimation>
         <IntersectionAnimation class="lg:col-span-2 flex flex-col items-center justify-center self-start lg:self-center"
           startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
-          <p class="text-2xl text-center">
+          <p class="text-2xl sm:text-3xl text-center">
             Hi, I'm Andreas and I study computer science at Ulm University in Germany.
             I am interested in web development and cybersecurity.
           </p>
@@ -53,13 +53,13 @@
     </section>
     <section class="min-h-screen flex flex-col items-center justify-between" id="technologies">
       <div class="flex flex-col items-center">
-        <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
+        <IntersectionAnimation class="mt-15 mb-5" startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <h2 class="text-4xl font-bold text-center flat-shadow-sm">Technologies</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-center flat-shadow-sm">Technologies</h2>
         </IntersectionAnimation>
-        <IntersectionAnimation class="mt-10" startingClass="opacity-0 translate-y-5"
+        <IntersectionAnimation startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <p class="text-3xl text-center standard-grid-width">This is what I use for development:</p>
+          <p class="text-2xl sm:text-3xl text-center standard-grid-width">This is what I use for development:</p>
         </IntersectionAnimation>
       </div>
       <div class="flex flex-col items-center sm:mt-40 xl:mt-0">
@@ -123,16 +123,16 @@
     </section>
     <section class="min-h-screen flex flex-col items-center justify-between" id="experience">
       <div class="flex flex-col items-center">
-        <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
+        <IntersectionAnimation class="mt-15 mb-5" startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <h2 class="text-4xl font-bold text-center flat-shadow-sm mx-5">Professional Experience & Education</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-center flat-shadow-sm mx-5">Professional Experience & Education</h2>
         </IntersectionAnimation>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 standard-grid-width gap-20 lg:gap-0 mt-10 lg:mt-0">
+      <div class="grid grid-cols-1 lg:grid-cols-2 standard-grid-width gap-20 lg:gap-0">
         <IntersectionAnimation
             class="flex flex-col items-center gap-10"
             startingClass="opacity-0 -translate-x-5" endingClass="opacity-100 translate-x-0">
-          <h3 class="text-3xl text-center">Professional Experience</h3>
+          <h3 class="text-2xl sm:text-3xl text-center">Professional Experience</h3>
           <TimeLine :items="[
             { title: 'Student Assistant', institution: 'Ulm University', time: 'Since 2023', details: ['Programming of the framework FeatureIDE and the library FeatJAR for feature-oriented software developent.'], image: '' },
             { title: 'Working Student', institution: 'PERI SE', time: '2022-2023', details: ['Management of a project for automatic data transmission of machine errors.', ' Development and automation of internal information systems and data transmission.'], image: '' },
@@ -153,17 +153,17 @@
     </section>
     <section class="min-h-screen flex flex-col items-center justify-between" id="contact">
       <div class="flex flex-col items-center">
-        <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
+        <IntersectionAnimation class="mt-15 mb-5" startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <h2 class="text-4xl font-bold text-center flat-shadow-sm">Contact</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-center flat-shadow-sm">Contact</h2>
         </IntersectionAnimation>
-        <IntersectionAnimation class="mt-10" startingClass="opacity-0 translate-y-5"
+        <IntersectionAnimation startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <p class="text-3xl text-center standard-grid-width">You can contact me per E-Mail:</p>
+          <p class="text-2xl sm:text-3xl text-center standard-grid-width">You can contact me per E-Mail:</p>
         </IntersectionAnimation>
       </div>
-      <div class="flex flex-col gap-10 mt-20 md:mt-0">
-        <IntersectionAnimation class="mt-5" startingClass="opacity-0 -translate-x-5"
+      <div class="flex flex-col gap-10">
+        <IntersectionAnimation startingClass="opacity-0 -translate-x-5"
           endingClass="opacity-100 translate-x-0">
           <img src="~/assets/images/mail.svg" alt="Mail" class="w-64 flat-shadow">
         </IntersectionAnimation>
