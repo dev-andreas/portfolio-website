@@ -134,7 +134,7 @@
             startingClass="opacity-0 -translate-x-5" endingClass="opacity-100 translate-x-0">
           <h3 class="text-2xl sm:text-3xl text-center">Professional Experience</h3>
           <TimeLine :items="[
-            { title: 'Student Assistant', institution: 'Ulm University', time: 'Since 2023', details: ['Programming of the framework FeatureIDE and the library FeatJAR for feature-oriented software developent.'], image: '' },
+            { title: 'Student Assistant', institution: 'Ulm University', time: 'Since 2023', details: ['Programming of the framework FeatureIDE and the library FeatJAR for feature-oriented software development.'], image: '' },
             { title: 'Working Student', institution: 'PERI SE', time: '2022-2023', details: ['Management of a project for automatic data transmission of machine errors.', ' Development and automation of internal information systems and data transmission.'], image: '' },
             { title: 'Freelancer', institution: 'self-employed', time: '2021-2022', details: ['Development of a website and regular maintenance for the start-up ultraTEC Innovation GmbH.'], image: '' }
             ]"></TimeLine>
