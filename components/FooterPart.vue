@@ -1,7 +1,7 @@
 <template>
   <footer class="flex flex-col md:flex-row items-center justify-center md:justify-between h-40 px-10">
     <div class="text">
-      <p>&copy; 2021 - {{ date }} Andreas Gerasimow</p>
+      <p>&copy; {{ date }} Andreas Gerasimow</p>
     </div>
     <div class="flex mt-5 lg:mt-0 gap-5">
       <a href="https://github.com/dev-andreas" target="_blank" rel="noopener">

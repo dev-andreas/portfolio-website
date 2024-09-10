@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -22,6 +23,14 @@ body {
 
 * {
     @apply text-font-dark;
+}
+
+.section-header {
+    @apply text-3xl sm:text-4xl font-bold text-center flat-shadow-sm;
+}
+
+.section-subheader {
+    @apply text-2xl sm:text-3xl text-center;
 }
 
 .btn {

@@ -8,7 +8,7 @@
       class="my-4 flex items-center h-full transform hover:translate-x-2 transition ease-out duration-200"
     >
       <div class="flex flex-col items-start h-full border-font-dark">
-        <p class="text-xs font-bold flat-shadow-sm">
+        <p class="text-lg sm:text-base font-bold flat-shadow-sm">
           {{ item.name }}
         </p>
         <div class="text-center flex flat-shadow">
@@ -22,8 +22,8 @@
       </div>
     </div>
     <div class="flex justify-between w-full opacity-50">
-      <p class="text-xs">Noob</p>
-      <p class="text-xs">Pro</p>
+      <p class="text-lg sm:text-base">Noob</p>
+      <p class="text-lg sm:text-base">Pro</p>
     </div>
   </div>
 </template>

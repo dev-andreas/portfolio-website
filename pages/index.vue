@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col gap-20">
     <IntersectionObserver @intersects="setArrow"></IntersectionObserver>
     <header class="flex flex-col justify-between items-center h-screen">
       <span></span>
@@ -10,7 +10,7 @@
           <IntersectionObserver @intersects="(value) => setIcon(value)"></IntersectionObserver>
         </IntersectionAnimation>
         <h1 class="text-font-dark text-3xl xs:text-4xl sm:text-5xl md:text-6xl mt-3 font-bold">Andreas Gerasimow</h1>
-        <p class="mt-1 text-xs xs:text-sm sm:text-base">Computer Science Student and Full Stack Developer</p>
+        <p class="mt-1">Computer Science Student</p>
       </div>
       <div class="h-10 w-10 mb-24">
         <Transition name="slide-bottom">
@@ -18,26 +18,29 @@
         </Transition>
       </div>
     </header>
-    <section class="flex flex-col items-center justify-between" id="about">
-      <IntersectionAnimation class="mt-15 mb-5" startingClass="opacity-0 translate-y-5" endingClass="opacity-100 translate-y-0">
-        <h2 class="text-3xl sm:text-4xl font-bold text-center flat-shadow-sm">About me</h2>
-      </IntersectionAnimation>
-      <div class="min-h-screen standard-grid-width place-items-center grid grid-cols-1 lg:grid-cols-3 gap-10">
+    <section class="min-h-screen flex flex-col items-center justify-between gap-10" id="about">
+      <div class="flex flex-col items-center">
+        <IntersectionAnimation startingClass="opacity-0 translate-y-5"
+          endingClass="opacity-100 translate-y-0">
+          <h2 class="section-header standard-grid-width">About me</h2>
+        </IntersectionAnimation>
+      </div>
+      <div class="standard-grid-width place-items-center grid grid-cols-1 lg:grid-cols-3 gap-10">
         <IntersectionAnimation class="flex flex-col justify-center self-end lg:self-center"
           startingClass="opacity-0 -translate-x-5" endingClass="opacity-100 translate-x-0">
           <img src="~/assets/images/andreas_gerasimow.jpg" alt="Andreas Gerasimow"
             class="w-72 h-72 xl:w-80 xl:h-80 rounded-md shadow-xl">
           <div class="pl-5 py-2 border-l border-font-dark mt-10 lg:mt-5">
             <p class="font-bold">Andreas Gerasimow</p>
-            <p class="">Ulm, Baden-Württemberg, Germany</p>
-            <p class="">andreas.gerasimow@uni-ulm.de</p>
+            <p class="">Amherst, Massachusetts, USA</p>
+            <p class="">agerasimow@umass.edu</p>
           </div>
         </IntersectionAnimation>
         <IntersectionAnimation class="lg:col-span-2 flex flex-col items-center justify-center self-start lg:self-center"
           startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
-          <p class="text-2xl sm:text-3xl text-center">
-            Hi, I'm Andreas and I study computer science at Ulm University in Germany.
-            I am interested in web development and cybersecurity.
+          <p class="section-subheader">
+            Hi, my name is Andreas and I'm currently doing an exchange year at the University of Massachusetts Amherst.
+            I'm a graduate computer science student specializing in IT security.
           </p>
           <span class="flex mt-10 gap-4">
             <a href="https://github.com/dev-andreas" target="_blank" rel="noopener noreferrer">
@@ -51,115 +54,116 @@
       </div>
       <span></span>
     </section>
-    <section class="min-h-screen flex flex-col items-center justify-between" id="technologies">
+    <section class="min-h-screen flex flex-col items-center justify-between gap-10" id="technologies">
       <div class="flex flex-col items-center">
-        <IntersectionAnimation class="mt-15 mb-5" startingClass="opacity-0 translate-y-5"
-          endingClass="opacity-100 translate-y-0">
-          <h2 class="text-3xl sm:text-4xl font-bold text-center flat-shadow-sm">Technologies</h2>
-        </IntersectionAnimation>
         <IntersectionAnimation startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <p class="text-2xl sm:text-3xl text-center standard-grid-width">This is what I use for development:</p>
+          <h2 class="section-header standard-grid-width">Languages & Technologies</h2>
+        </IntersectionAnimation>
+        <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
+          endingClass="opacity-100 translate-y-0">
+          <p class="section-subheader standard-grid-width">This is what I have used in my work and projects:</p>
         </IntersectionAnimation>
       </div>
-      <div class="flex flex-col items-center sm:mt-40 xl:mt-0">
+      <div class="flex flex-col items-center">
         <div class="grid grid-cols-1 xl:grid-cols-2 place-items-center standard-grid-width sm:gap-20 lg:gap-40 xl:gap-0">
           <IntersectionAnimation
-            class="flex flex-col justify-center scale-60 xs:scale-70 sm:scale-100 lg:scale-125 xl:scale-100 -mt-5 lg:mt-0"
+            class="flex flex-col justify-center scale-60 xs:scale-70 sm:scale-100 lg:scale-125 xl:scale-100 -mt-24 xs:-mt-20 sm:mt-0 lg:mt-12 xl:mt-0"
             startingClass="opacity-0 -translate-x-5" endingClass="opacity-100 translate-x-0">
             <StatGraph :items="languages" />
           </IntersectionAnimation>
           <IntersectionAnimation
-            class="flex flex-wrap items-center justify-center gap-4 sm:w-132 scale-100 lg:scale-125 xl:scale-100"
+            class="flex flex-wrap items-center justify-center gap-4 sm:w-132 scale-100 lg:scale-125 xl:scale-100 xs:mb-0 lg:mb-12 xl:mb-0"
             startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
             <div class="framework">
-              <img src="~/assets/images/frameworks/vue.svg" alt="Vue.js" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Vue.js</p>
+              <img src="~/assets/images/frameworks/tux.svg" alt="Linux" />
+              <p class="text-sm sm:text-base font-bold my-1">Linux</p>
             </div>
             <div class="framework">
-              <img src="~/assets/images/frameworks/nuxt.svg" alt="Nuxt.js" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Nuxt.js</p>
-            </div>
-            <div class="framework">
-              <img src="~/assets/images/frameworks/node.svg" alt="Node.js" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Node.js</p>
-            </div>
-            <div class="framework">
-              <img src="~/assets/images/frameworks/tailwindcss.svg" alt="Tailwind CSS" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Tailwindcss</p>
-            </div>
-            <div class="framework">
-              <img src="~/assets/images/frameworks/spring.svg" alt="Spring" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Spring</p>
-            </div>
-            <div class="framework">
-              <img src="~/assets/images/frameworks/pgsql.svg" alt="PostgreSQL" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">pgSQL</p>
-            </div>
-            <div class="framework">
-              <img src="~/assets/images/frameworks/docker.svg" alt="Git" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Docker</p>
-            </div>
-            <div class="framework">
-              <img src="~/assets/images/frameworks/git.svg" alt="Docker" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Git</p>
+              <img src="~/assets/images/frameworks/git.svg" alt="Git" />
+              <p class="text-sm sm:text-base font-bold my-1">Git</p>
             </div>
             <div class="framework">
               <img src="~/assets/images/frameworks/bash.svg" alt="Bash" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Bash</p>
+              <p class="text-sm sm:text-base font-bold my-1">Bash</p>
+            </div>
+            <div class="framework">
+              <img src="~/assets/images/frameworks/pgsql.svg" alt="PostgreSQL" />
+              <p class="text-sm sm:text-base font-bold my-1">pgSQL</p>
+            </div>
+            <div class="framework">
+              <img src="~/assets/images/frameworks/docker.svg" alt="Docker" />
+              <p class="text-sm sm:text-base font-bold my-1">Docker</p>
+            </div>
+            <div class="framework">
+              <img src="~/assets/images/frameworks/spring.svg" alt="Spring" />
+              <p class="text-sm sm:text-base font-bold my-1">Spring</p>
             </div>
             <div class="framework">
               <img src="~/assets/images/frameworks/vscode.svg" alt="VS Code" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">VS Code</p>
+              <p class="text-sm sm:text-base font-bold my-1">VSCode</p>
             </div>
             <div class="framework">
               <img src="~/assets/images/frameworks/intellij.svg" alt="Intellij Idea" />
-              <p class="text-xs sm:text-lg xl:text-xl font-bold my-1">Intellij Idea</p>
+              <p class="text-sm sm:text-base font-bold my-1">Intellij</p>
+            </div>
+            <div class="framework">
+              <img src="~/assets/images/frameworks/vue.svg" alt="Vue.js" />
+              <p class="text-sm sm:text-base font-bold my-1">Vue.js</p>
+            </div>
+            <div class="framework">
+              <img src="~/assets/images/frameworks/nuxt.svg" alt="Nuxt.js" />
+              <p class="text-sm sm:text-base font-bold my-1">Nuxt.js</p>
+            </div>
+            <div class="framework">
+              <img src="~/assets/images/frameworks/node.svg" alt="Node.js" />
+              <p class="text-sm sm:text-base font-bold my-1">Node.js</p>
             </div>
           </IntersectionAnimation>
         </div>
       </div>
-      <span class="mb-40"></span>
+      <span></span>
     </section>
-    <section class="min-h-screen flex flex-col items-center justify-between" id="experience">
+    <section class="min-h-screen flex flex-col items-center justify-between gap-10" id="experience">
       <div class="flex flex-col items-center">
-        <IntersectionAnimation class="mt-15 mb-5" startingClass="opacity-0 translate-y-5"
+        <IntersectionAnimation startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <h2 class="text-3xl sm:text-4xl font-bold text-center flat-shadow-sm mx-5">Professional Experience & Education</h2>
+          <h2 class="section-header standard-grid-width">Professional Experience & Education</h2>
         </IntersectionAnimation>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 standard-grid-width gap-20 lg:gap-0">
+      <div class="grid grid-cols-1 lg:grid-cols-2 standard-grid-width gap-16 lg:gap-0">
         <IntersectionAnimation
             class="flex flex-col items-center gap-10"
             startingClass="opacity-0 -translate-x-5" endingClass="opacity-100 translate-x-0">
-          <h3 class="text-2xl sm:text-3xl text-center">Professional Experience</h3>
+          <h3 class="section-subheader standard-grid-width">Professional Experience</h3>
           <TimeLine :items="[
-            { title: 'Student Assistant', institution: 'Ulm University', time: 'Since 2023', details: ['Programming of the framework FeatureIDE and the library FeatJAR for feature-oriented software development.'], image: '' },
-            { title: 'Working Student', institution: 'PERI SE', time: '2022-2023', details: ['Management of a project for automatic data transmission of machine errors.', ' Development and automation of internal information systems and data transmission.'], image: '' },
-            { title: 'Freelancer', institution: 'self-employed', time: '2021-2022', details: ['Development of a website and regular maintenance for the start-up ultraTEC Innovation GmbH.'], image: '' }
+            { title: 'Student Assistant', institution: 'Ulm University', time: 'Nov 2023 - Aug 2024', details: ['Collaborated on the FeatureIDE framework and the FeatJAR library for feature-oriented software development. Both projects are open-source and available on GitHub.'], image: '' },
+            { title: 'Working Student', institution: 'PERI SE', time: 'Sep 2022 - Oct 2023', details: ['Developed a web application interface for automatic data transmission of errors by machines in production halls.', 'Collaborated on the company’s internal information systems in an agile team.'], image: '' },
+            { title: 'Freelancer', institution: 'self-employed', time: 'Aug 2021 - Aug 2022', details: ['Developed and maintained a website for the start-up ultraTEC Innovation GmbH.'], image: '' }
             ]"></TimeLine>
         </IntersectionAnimation>
         <IntersectionAnimation
             class="flex flex-col items-center gap-10"
             startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
-          <h3 class="text-3xl text-center">Education</h3>
+          <h3 class="section-subheader standard-grid-width">Education</h3>
           <TimeLine :items="[
-            { title: 'BSc Computer Science', institution: 'Ulm University', time: '2021-2024', details: '', image: '' },
-            { title: 'Abitur', institution: 'Kilian-von-Steiner Schule', time: '2019-2021', details: '', image: '' }
+            { title: 'MSc Computer Science (Exchange Year)', institution: 'University of Massachusetts Amherst', time: 'Sep 2024 - May 2025', details: '', image: '' },
+            { title: 'BSc Computer Science', institution: 'Ulm University', time: 'Sep 2021 - Aug 2024', details: '', image: '' },
+            { title: 'Abitur', institution: 'Kilian-von-Steiner Schule', time: 'Sep 2018 - Jun 2021', details: '', image: '' }
             ]"></TimeLine>
         </IntersectionAnimation>
       </div>
-      <span class="mb-40"></span>
+      <span></span>
     </section>
-    <section class="min-h-screen flex flex-col items-center justify-between" id="contact">
+    <section class="min-h-screen flex flex-col items-center justify-between gap-10" id="contact">
       <div class="flex flex-col items-center">
-        <IntersectionAnimation class="mt-15 mb-5" startingClass="opacity-0 translate-y-5"
-          endingClass="opacity-100 translate-y-0">
-          <h2 class="text-3xl sm:text-4xl font-bold text-center flat-shadow-sm">Contact</h2>
-        </IntersectionAnimation>
         <IntersectionAnimation startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <p class="text-2xl sm:text-3xl text-center standard-grid-width">You can contact me per E-Mail:</p>
+          <h2 class="section-header standard-grid-width">Contact</h2>
+        </IntersectionAnimation>
+        <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
+          endingClass="opacity-100 translate-y-0">
+          <p class="section-subheader standard-grid-width">You can contact me per E-Mail:</p>
         </IntersectionAnimation>
       </div>
       <div class="flex flex-col gap-10">
@@ -173,7 +177,7 @@
           <a class="btn-primary" href="mailto:andreas.gerasimow12@gmail.com">Send Mail</a>
         </IntersectionAnimation>
       </div>
-      <span class="mb-10 md:mb-0"></span>
+      <span></span>
     </section>
   </div>
 </template>
@@ -187,9 +191,9 @@ const { showIcon } = storeToRefs(useNavbarStore());
 const languages = reactive([
   { name: "Java/Kotlin", votes: 90 },
   { name: "JavaScript/TypeScript", votes: 70 },
-  { name: "Python", votes: 60 },
+  { name: "SQL", votes: 60 },
   { name: "PHP", votes: 60 },
-  { name: "SQL", votes: 40 },
+  { name: "Python", votes: 40 },
 ]);
 const showArrow = ref(true);
 
