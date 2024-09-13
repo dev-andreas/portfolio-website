@@ -1,50 +1,11 @@
 <template>
   <div class="w-64">
-    <p
-      @click="toggle"
-      class="
-        tracking-wider
-        rounded-md
-        p-2
-        bg-gray-200
-        transition
-        ease-out
-        duration-500
-        flex
-        justify-between
-        items-center
-        cursor-pointer
-      "
-    >
+    <p @click="toggle" class="tracking-wider rounded-md p-2 bg-gray-200 transition ease-out duration-500 flex justify-between items-center cursor-pointer">
       {{ link.name }}
-      <ChevronDownSvg
-        class="
-          w-4
-          h-4
-          fill-font-dark
-          inline
-          transform
-          transition
-          ease-out
-          duration-200
-        "
-        :class="[open ? 'rotate-180' : 'rotate-0']"
-      />
+      <ChevronDownSvg class="w-4 h-4 fill-font-dark inline transform transition ease-out duration-200" :class="[open ? 'rotate-180' : 'rotate-0']"/>
     </p>
     <transition name="slide-top" mode="">
-      <ul
-        v-if="open"
-        class="
-          p-4
-          w-64
-          border-2 border-gray-300
-          rounded-md
-          shadow-md
-          bg-backg-light
-          absolute
-          z-50
-        "
-      >
+      <ul v-if="open" class="p-4 w-64 border-2 border-gray-300 rounded-md shadow-md bg-backg-light absolute z-50">
         <li v-for="link in link.subdirs">
           <a
             v-if="link.jump"
@@ -58,19 +19,12 @@
             class="tracking-wider text-sm"
           >
             <div
-              class="
-                p-2
-                rounded-md
-                hover:bg-gray-200
-                transition
-                ease-in
-                duration-100
-              "
+              class="p-2 rounded-md hover:bg-gray-200 transition ease-in duration-100"
               @click="$emit('jumped')"
             >
               {{ link.name }}
-            </div></NuxtLink
-          >
+            </div>
+          </NuxtLink>
           <a
             v-else
             :href="link.route"
@@ -78,21 +32,11 @@
             rel="noopener noreferrer"
           >
             <div
-              class="
-                p-2
-                rounded-md
-                hover:bg-gray-200
-                transition
-                ease-in
-                duration-100
-                flex
-                items-center
-              "
+              class="p-2 rounded-md hover:bg-gray-200 transition ease-in duration-100 flex items-center"
               @click="open = false"
             >
               <ExternalLinkSvg class="stroke-gray-600 w-4 mr-2" />
-              <span v-if="link.jump" class="text-gray-300"># </span
-              >{{ link.name }}
+              <span v-if="link.jump" class="text-gray-300"># </span>{{ link.name }}
             </div>
           </a>
         </li>
