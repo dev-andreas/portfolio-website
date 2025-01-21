@@ -61,6 +61,14 @@ body {
     @apply h-8 xs:h-10 sm:h-16 flat-shadow-sm;
 }
 
+.language {
+    @apply px-4 py-1 border-b border-font-dark flex flex-col items-center justify-center gap-1 font-bold relative hover:-translate-y-2 transition ease-out duration-200;
+}
+
+.project {
+    @apply border-l border-font-dark py-2 pl-4 flex flex-col gap-3 items-start justify-start transition-all ease-out duration-200;
+}
+
 .bgg {
     background-image: url("~/assets/images/diagonal_line.svg");
     background-size: 1.5rem;
