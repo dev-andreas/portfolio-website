@@ -12,8 +12,9 @@
         <div class="w-4 h-4 rounded-full border border-font-dark transition-all duration-200 ease-out translate-y-1" :class="[index == hover ? 'bg-font-dark' : 'bg-backg-light']"></div>
       </div>
       <div class="ml-4 w-60 xs:w-72 sm:w-120 lg:w-80 xl:w-120">
-        <p><i class="">{{ item.time }}</i></p>
-        <p><b>{{ item.institution }}</b>, {{ item.title }}</p>
+        <p>{{ item.time }}</p>
+        <p><b>{{ item.institution }}</b></p>
+        <i>{{ item.title }}</i>
         <ul>
           <li class="list-disc translate-x-5" v-for="detail in item.details">{{ detail }}</li>
         </ul>

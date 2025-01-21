@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col gap-20">
-    <IntersectionObserver @intersects="setArrow"></IntersectionObserver>
+  <div class="flex flex-col gap-10">
     <header class="flex flex-col justify-between items-center h-screen">
+      <IntersectionObserver @intersects="setArrow"></IntersectionObserver>
       <span></span>
       <div class="flex flex-col justify-center items-center flat-shadow-sm mt-10">
         <IntersectionAnimation startingClass="opacity-0 translate-y-3 blur-sm"
@@ -12,13 +12,14 @@
         <h1 class="text-font-dark text-3xl xs:text-4xl sm:text-5xl md:text-6xl mt-3 font-bold">Andreas Gerasimow</h1>
         <p class="mt-1">Computer Science Student</p>
       </div>
-      <div class="h-10 w-10 mb-24">
+      <div class="h-10 w-10 mb-40">
         <Transition name="slide-bottom">
           <SvgpathsChevronDownSvg v-if="showArrow" class="h-10 fill-font-dark animate-bounce" />
         </Transition>
       </div>
     </header>
-    <section class="min-h-screen flex flex-col items-center justify-between gap-10" id="about">
+  
+    <section class="section-layout" id="about">
       <div class="flex flex-col items-center">
         <IntersectionAnimation startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
@@ -33,14 +34,14 @@
           <div class="pl-5 py-2 border-l border-font-dark mt-10 lg:mt-5">
             <p class="font-bold">Andreas Gerasimow</p>
             <p class="">Amherst, Massachusetts, USA</p>
-            <p class="">agerasimow@umass.edu</p>
+            <p class="">{{ email }}</p>
           </div>
         </IntersectionAnimation>
         <IntersectionAnimation class="lg:col-span-2 flex flex-col items-center justify-center self-start lg:self-center"
           startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
           <p class="section-subheader">
-            Hi, my name is Andreas and I'm currently doing an exchange year at the University of Massachusetts Amherst.
-            I'm a graduate computer science student specializing in IT security.
+            Hi, I’m Andreas, a graduate computer science student specializing in cybersecurity.
+            I’m currently pursuing an exchange year at the University of Massachusetts Amherst.
           </p>
           <span class="flex mt-10 gap-4">
             <a href="https://github.com/dev-andreas" target="_blank" rel="noopener noreferrer">
@@ -54,7 +55,8 @@
       </div>
       <span></span>
     </section>
-    <section class="min-h-screen flex flex-col items-center justify-between gap-10" id="technologies">
+
+    <section class="section-layout" id="technologies">
       <div class="flex flex-col items-center">
         <IntersectionAnimation startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
@@ -62,7 +64,7 @@
         </IntersectionAnimation>
         <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <p class="section-subheader standard-grid-width">This is what I have used in my work and projects:</p>
+          <p class="section-subheader standard-grid-width">Here are the tools I’ve used in my work and projects:</p>
         </IntersectionAnimation>
       </div>
       <div class="flex flex-col items-center">
@@ -124,7 +126,8 @@
       </div>
       <span></span>
     </section>
-    <section class="min-h-screen flex flex-col items-center justify-between gap-10" id="experience">
+
+    <section class="section-layout" id="experience">
       <div class="flex flex-col items-center">
         <IntersectionAnimation startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
@@ -147,15 +150,16 @@
             startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
           <h3 class="section-subheader standard-grid-width">Education</h3>
           <TimeLine :items="[
-            { title: 'MSc Computer Science (Exchange Year)', institution: 'University of Massachusetts Amherst', time: 'Sep 2024 - May 2025', details: '', image: '' },
-            { title: 'BSc Computer Science', institution: 'Ulm University', time: 'Sep 2021 - Aug 2024', details: '', image: '' },
-            { title: 'Abitur', institution: 'Kilian-von-Steiner Schule', time: 'Sep 2018 - Jun 2021', details: '', image: '' }
+            { title: 'Computer Science, Master of Science (Exchange Year)', institution: 'University of Massachusetts Amherst', time: 'Sep 2024 - present', details: '', image: '' },
+            { title: 'Computer Science, Master of Science', institution: 'Ulm University', time: 'Sep 2021 - Aug 2024', details: ['Grade: 1.2', 'Bachelor Thesis Title: LoRa for localization in outdoor scenarios'], image: '' },
+            { title: 'Abitur', institution: 'Kilian-von-Steiner Schule', time: 'Sep 2018 - Jun 2021', details: [], image: '' }
             ]"></TimeLine>
         </IntersectionAnimation>
       </div>
       <span></span>
     </section>
-    <section class="min-h-screen flex flex-col items-center justify-between gap-10" id="contact">
+
+    <section class="section-layout" id="contact">
       <div class="flex flex-col items-center">
         <IntersectionAnimation startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
@@ -163,21 +167,21 @@
         </IntersectionAnimation>
         <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <p class="section-subheader standard-grid-width">You can contact me per E-Mail:</p>
+          <p class="section-subheader standard-grid-width">You can reach me via email.</p>
         </IntersectionAnimation>
       </div>
-      <div class="flex flex-col gap-10">
+      <div class="flex flex-col items-center gap-5">
         <IntersectionAnimation startingClass="opacity-0 -translate-x-5"
           endingClass="opacity-100 translate-x-0">
           <img src="~/assets/images/mail.svg" alt="Mail" class="w-64 flat-shadow">
         </IntersectionAnimation>
-        <IntersectionAnimation class="w-full flex flex-col gap-5 items-center" startingClass="opacity-0 translate-x-5"
-          endingClass="opacity-100 translate-x-0">
-          <p class="font-bold">andreas.gerasimow12@gmail.com</p>
-          <a class="btn-primary" href="mailto:andreas.gerasimow12@gmail.com">Send Mail</a>
-        </IntersectionAnimation>
-      </div>
-      <span></span>
+          <IntersectionAnimation startingClass="opacity-0 translate-x-5"
+            endingClass="opacity-100 translate-x-0" class="flex flex-col items-center gap-5">
+            <p class="font-bold">{{ email }}</p>
+            <a class="btn-primary" :href="'mailto:' + email">Send Mail</a>
+          </IntersectionAnimation>
+        </div>
+        <div></div>
     </section>
   </div>
 </template>
@@ -195,7 +199,9 @@ const languages = reactive([
   { name: "PHP", votes: 60 },
   { name: "Python", votes: 40 },
 ]);
+
 const showArrow = ref(true);
+const email = ref("andreas@gerasimow.de");
 
 function setArrow(intersects) {
   showArrow.value = intersects;
@@ -205,3 +211,9 @@ function setIcon(value) {
   showIcon.value = !value;
 }
 </script>
+
+<style scoped>
+  .section-layout {
+    @apply min-h-screen flex flex-col items-center justify-between gap-10 border-t border-primary-200 pt-10;
+  }
+</style>
