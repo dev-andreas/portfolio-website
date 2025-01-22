@@ -198,7 +198,7 @@
         <IntersectionAnimation
             class="flex flex-col items-center gap-10"
             startingClass="opacity-0 -translate-x-5" endingClass="opacity-100 translate-x-0">
-          <h3 class="section-subheader standard-grid-width">Professional Experience</h3>
+          <h3 class="section-subheader">Professional Experience</h3>
           <TimeLine :items="[
             { title: 'Student Assistant', institution: 'Ulm University', time: 'Nov 2023 - Aug 2024', details: ['Collaborated on the FeatureIDE framework and the FeatJAR library for feature-oriented software development. Both projects are open-source and available on GitHub.'], image: '' },
             { title: 'Working Student', institution: 'PERI SE', time: 'Sep 2022 - Oct 2023', details: ['Developed a web application interface for automatic data transmission of errors by machines in production halls.', 'Collaborated on the company’s internal information systems in an agile team.'], image: '' },
@@ -208,7 +208,7 @@
         <IntersectionAnimation
             class="flex flex-col items-center gap-10"
             startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
-          <h3 class="section-subheader standard-grid-width">Education</h3>
+          <h3 class="section-subheader">Education</h3>
           <TimeLine :items="[
             { title: 'Computer Science, Master of Science (Exchange Year)', institution: 'University of Massachusetts Amherst', time: 'Sep 2024 - present', details: '', image: '' },
             { title: 'Computer Science, Master of Science', institution: 'Ulm University', time: 'Sep 2021 - Aug 2024', details: ['Grade: 1.2', 'Bachelor Thesis Title: LoRa for localization in outdoor scenarios'], image: '' },
@@ -228,7 +228,7 @@
         </IntersectionAnimation>
         <IntersectionAnimation class="mt-5" startingClass="opacity-0 translate-y-5"
           endingClass="opacity-100 translate-y-0">
-          <p class="section-subheader standard-grid-width">You can reach me via email.</p>
+          <p class="section-subheader standard-grid-width">You can reach me via email</p>
         </IntersectionAnimation>
       </div>
       <div class="flex flex-col items-center gap-5">
