@@ -34,7 +34,7 @@
             class="w-72 h-72 xl:w-80 xl:h-80 rounded-3xl shadow-xl">
           <div class="pl-5 py-2 border-l border-font-dark mt-10 lg:mt-5">
             <p class="font-bold">Andreas Gerasimow</p>
-            <p class="">Amherst, Massachusetts, USA</p>
+            <p class="">Ulm, Germany</p>
             <p class="">{{ email }}</p>
           </div>
         </IntersectionAnimation>
@@ -42,7 +42,7 @@
           startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
           <p class="section-subheader">
             Hi, I’m Andreas, a graduate computer science student specializing in cybersecurity.
-            I’m currently pursuing an exchange year at the University of Massachusetts Amherst.
+            I’m currently pursuing a master’s degree at Ulm University.
           </p>
           <span class="flex mt-10 gap-4">
             <a href="https://github.com/dev-andreas" target="_blank" rel="noopener noreferrer">
@@ -210,7 +210,8 @@
             startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
           <h3 class="section-subheader">Education</h3>
           <TimeLine :items="[
-            { title: 'Computer Science, Master of Science (Exchange Year)', institution: 'University of Massachusetts Amherst', time: 'Sep 2024 - present', details: '', image: '' },
+            { title: 'Computer Science, Master of Science', institution: 'Ulm University', time: 'June 2025 - present', details: '', image: '' },
+            { title: 'Computer Science, Master of Science (Exchange Year)', institution: 'University of Massachusetts Amherst', time: 'Sep 2024 - May 2025', details: '', image: '' },
             { title: 'Computer Science, Master of Science', institution: 'Ulm University', time: 'Sep 2021 - Aug 2024', details: ['Grade: 1.2', 'Bachelor Thesis Title: LoRa for localization in outdoor scenarios'], image: '' },
             { title: 'Abitur', institution: 'Kilian-von-Steiner Schule', time: 'Sep 2018 - Jun 2021', details: [], image: '' }
             ]"></TimeLine>

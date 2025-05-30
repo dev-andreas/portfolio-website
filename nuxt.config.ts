@@ -14,12 +14,6 @@ export default defineNuxtConfig({
       name: 'fade',
     }
   },
-  runtimeConfig: {
-    public: {
-      apiUrl: "https://mail.andreasgera.de/",
-      recaptchaPublic: process.env.RECAPTCHA_PUBLIC
-    }
-  },
   css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
