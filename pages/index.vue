@@ -196,23 +196,26 @@
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 standard-grid-width gap-16 lg:gap-0">
         <IntersectionAnimation
+            :topIntersection="true"
             class="flex flex-col items-center gap-10"
             startingClass="opacity-0 -translate-x-5" endingClass="opacity-100 translate-x-0">
           <h3 class="section-subheader">Professional Experience</h3>
           <TimeLine :items="[
+            { title: 'Working Student - Software Development', institution: 'eXXcelent solutions', time: 'Aug 2025 - present', details: ['Full-stack development for the modeling and simulation software easySSP.'], image: '' },
             { title: 'Student Assistant', institution: 'Ulm University', time: 'Nov 2023 - Aug 2024', details: ['Collaborated on the FeatureIDE framework and the FeatJAR library for feature-oriented software development. Both projects are open-source and available on GitHub.'], image: '' },
-            { title: 'Working Student', institution: 'PERI SE', time: 'Sep 2022 - Oct 2023', details: ['Developed a web application interface for automatic data transmission of errors by machines in production halls.', 'Collaborated on the company’s internal information systems in an agile team.'], image: '' },
+            { title: 'Working Student - Software Development', institution: 'PERI SE', time: 'Sep 2022 - Oct 2023', details: ['Improved the company’s internal information systems in an agile team.'], image: '' },
             { title: 'Freelancer', institution: 'self-employed', time: 'Aug 2021 - Aug 2022', details: ['Developed and maintained a website for the start-up ultraTEC Innovation GmbH.'], image: '' }
             ]"></TimeLine>
         </IntersectionAnimation>
         <IntersectionAnimation
+            :topIntersection="true"
             class="flex flex-col items-center gap-10"
             startingClass="opacity-0 translate-x-5" endingClass="opacity-100 translate-x-0">
           <h3 class="section-subheader">Education</h3>
           <TimeLine :items="[
             { title: 'Computer Science, Master of Science', institution: 'Ulm University', time: 'June 2025 - present', details: '', image: '' },
             { title: 'Computer Science, Master of Science (Exchange Year)', institution: 'University of Massachusetts Amherst', time: 'Sep 2024 - May 2025', details: '', image: '' },
-            { title: 'Computer Science, Master of Science', institution: 'Ulm University', time: 'Sep 2021 - Aug 2024', details: ['Grade: 1.2', 'Bachelor Thesis Title: LoRa for localization in outdoor scenarios'], image: '' },
+            { title: 'Computer Science, Bachelor of Science', institution: 'Ulm University', time: 'Sep 2021 - Aug 2024', details: ['Grade: 1.2', 'Bachelor Thesis Title: LoRa for localization in outdoor scenarios'], image: '' },
             { title: 'Abitur', institution: 'Kilian-von-Steiner Schule', time: 'Sep 2018 - Jun 2021', details: [], image: '' }
             ]"></TimeLine>
         </IntersectionAnimation>

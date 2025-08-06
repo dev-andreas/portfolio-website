@@ -1,6 +1,6 @@
 <template>
   <div :class="[transitionClass, intersected ? endingClass : startingClass]">
-    <div class="w-full absolute top-2/3 pointer-events-none">
+    <div class="w-full absolute pointer-events-none" :class="topIntersection ? 'top-10' : 'top-2/3'">
       <IntersectionObserver @intersects="intersect" />
     </div>
     <slot></slot>
@@ -19,6 +19,10 @@ const props = defineProps({
   delay: {
     type: Number,
     default: 0,
+  },
+  topIntersection: {
+    type: Boolean,
+    default: false
   }
 });
 
