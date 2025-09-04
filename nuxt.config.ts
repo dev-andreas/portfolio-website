@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2025-09-04',
   devtools: { enabled: true },
   app: {
     head: {
@@ -9,9 +10,6 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'Portfolio from Andreas Gerasimow.' }
       ],
-    },
-    pageTransition: {
-      name: 'fade',
     }
   },
   css: ['~/assets/css/main.css'],
