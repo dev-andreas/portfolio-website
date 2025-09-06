@@ -1,72 +1,26 @@
 <template>
-    <IntersectionAnimation
-      class="p-5 w-80 h-60 flex flex-col justify-center items-center border border-font-dark bg-backg-light flat-shadow rounded-md"
-      startingClass="opacity-0 translate-y-10"
-      endingClass="opacity-100 translate-y-0"
-    >
-      <div
-        class="bgg w-full h-full flex flex-col justify-center items-center"
-        @mouseover="onHover()"
-        @mouseleave="onLeave()"
-      >
-        <transition name="slide-top" mode="out-in">
-          <div
-            v-if="showSlot && currentProject == props.index"
-            key="hover"
-            class="flex flex-col justify-center items-center text-center"
-          >
-            <slot>Project</slot>
-          </div>
-          <div v-else
-            key="nonhover"
-            class="flex flex-col justify-center items-center"
-          >
-            <img :src="logo" :alt="alt" class="h-24" />
-            <p class="text-2xl font-bold mt-2">{{ title }}</p>
-          </div>
-        </transition>
-      </div>
-    </IntersectionAnimation>
-  </template>
-  
-<script setup>
-import { storeToRefs } from "pinia";
-import { useProjectsStore } from "~/stores/stores.js";
+  <div class="flex flex-col sm:flex-row gap-5 items-center">
+    <div class="standard-grid-width standard-grid-height sm:w-32 sm:h-32 flex-shrink-0 overflow-hidden rounded-md flat-shadow border border-font-dark">
+      <img :src="props.src" :alt="props.alt" class="object-cover w-full">
+    </div>
+    <div class="flex flex-col items-start gap-2">
+      <slot></slot>
+    </div>
+  </div>
+</template>
 
-const { currentProject } = storeToRefs(useProjectsStore());
+<script setup>
 
 const props = defineProps({
-  logo: {
+  src: {
     type: String,
     default: null
   },
   alt: {
     type: String,
     default: "project",
-  },
-  title: {
-    type: String,
-    default: "title",
-  },
-  index: {
-    type: Number,
-  },
+  }
 });
-
-const hover = ref(false);
-
-function onHover() {
-    hover.value = true;
-    currentProject.value = props.index;
-}
-
-function onLeave() {
-    hover.value = false;
-    currentProject.value = -1
-}
-
-const showSlot = computed(() => hover.value);
 </script>
-  
-<style scoped>
-</style>
+
+<style scoped></style>

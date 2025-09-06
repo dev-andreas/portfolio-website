@@ -26,11 +26,11 @@ body {
 }
 
 .section-header {
-    @apply text-3xl sm:text-4xl font-bold text-center flat-shadow-sm;
+    @apply text-xl sm:text-2xl font-bold flat-shadow-sm text-start;
 }
 
 .section-subheader {
-    @apply text-2xl sm:text-3xl text-center;
+    @apply text-lg sm:text-xl;
 }
 
 .btn {
@@ -50,23 +50,17 @@ body {
 }
 
 .standard-grid-width {
-    @apply w-72 2xs:w-80 xs:w-96 sm:w-132 md:w-168 lg:w-228 xl:w-300; /*2xl:w-360 */
+    @apply w-72 2xs:w-80 xs:w-96 sm:w-132 md:w-168 lg:w-228 xl:w-300;
+    /*2xl:w-360 */
 }
 
-.framework {
-    @apply h-16 w-16 xs:w-20 xs:h-20 sm:w-28 sm:h-28 lg:w-30 lg:h-30 flex flex-col items-center justify-end border-b border-font-dark transform hover:-translate-y-2 transition ease-out duration-200;
-}
-
-.framework>img {
-    @apply h-8 xs:h-10 sm:h-16 flat-shadow-sm;
+.standard-grid-height {
+    @apply h-72 2xs:h-80 xs:h-96 sm:h-132 md:h-168 lg:h-228 xl:h-300;
+    /*2xl:w-360 */
 }
 
 .language {
-    @apply px-4 py-1 border-b border-font-dark flex flex-col items-center justify-center gap-1 font-bold relative hover:-translate-y-2 transition ease-out duration-200;
-}
-
-.project {
-    @apply border-l border-font-dark py-2 pl-4 flex flex-col gap-3 items-start justify-start transition-all ease-out duration-200;
+    @apply px-4 py-1 border-b border-font-dark flex flex-col items-center justify-center gap-1 font-bold relative hover:-translate-y-1 transition ease-out duration-200;
 }
 
 .bgg {
@@ -84,41 +78,48 @@ body {
 
 /* ## Vue animations ## */
 
-.slide-top-enter-active, 
-.slide-top-leave-active{
+.slide-top-enter-active,
+.slide-top-leave-active {
     @apply transition-all ease-out duration-300;
 }
 
-.slide-top-enter-from, .slide-top-leave-to {
-  transform: translateY(10px);
-  opacity: 0;
+.slide-top-enter-from,
+.slide-top-leave-to {
+    transform: translateY(10px);
+    opacity: 0;
 }
 
 .slide-bottom-enter-active,
 .slide-bottom-leave-active {
     @apply transition-all ease-out duration-300;
 }
-.slide-bottom-enter-from, .slide-bottom-leave-to {
-  transform: translateY(-10px);
-  opacity: 0;
+
+.slide-bottom-enter-from,
+.slide-bottom-leave-to {
+    transform: translateY(-10px);
+    opacity: 0;
 }
 
 .slide-right-enter-active,
 .slide-right-leave-active {
     @apply transition-all ease-out duration-300;
 }
-.slide-right-enter-from, .slide-right-leave-to {
-  transform: translateX(-10px);
-  opacity: 0;
+
+.slide-right-enter-from,
+.slide-right-leave-to {
+    transform: translateX(-10px);
+    opacity: 0;
 }
 
 .slide-left-enter-active,
 .slide-left-leave-active {
     @apply transition-all ease-out duration-300;
 }
-.slide-left-enter-from, .slide-left-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
+
+.slide-left-enter-from,
+.slide-left-leave-to {
+    transform: translateX(10px);
+    opacity: 0;
 }
 
 .slide-left-right {
@@ -126,11 +127,19 @@ body {
 }
 
 @keyframes left-right {
-    0% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    100% { transform: translateX(-5px); }
+    0% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(-5px);
+    }
 }
 
-.grecaptcha-badge { 
+.grecaptcha-badge {
     visibility: hidden;
 }
