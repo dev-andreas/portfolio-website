@@ -12,7 +12,7 @@
         </div>
         <FooterPart />
       </aside>
-      <div class="flex flex-col col-span-2 pb-20">
+      <div class="flex flex-col col-span-2">
         <ArticleSection header="About Me" id="top" :showHeader="false" class="pt-10">
           <IntersectionAnimation v-if="mobileView" startingClass="opacity-0 -translate-x-3 blur-sm"
             endingClass="opacity-100 translate-x-0 blur-none">
