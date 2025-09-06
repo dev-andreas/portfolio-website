@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex flex-col gap-2">
+  <footer class="flex flex-col gap-2 border-t border-primary-300 pt-10">
     <span class="flex gap-2">
       <a href="https://github.com/dev-andreas" target="_blank" rel="noopener noreferrer">
         <img src="~/assets/images/social_nets/github.svg" alt="GitHub Account" class="w-6 h-6 flat-shadow-sm">
