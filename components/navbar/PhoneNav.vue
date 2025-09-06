@@ -15,7 +15,7 @@
           </div>
         </div>
         <transition name="slide-top" mode="out-in">
-          <a v-if="!scrolledToTop" class="font-bold flat-shadow-sm text-xl">Andreas Gerasimow</a>
+          <a v-if="!scrolledToTop" class="font-bold text-xl">Andreas Gerasimow</a>
         </transition>
       </div>
     </div>
