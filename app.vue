@@ -44,6 +44,17 @@ function resize() {
   width.value = window.innerWidth;
 }
 
+onMounted(() => {
+  const hidden = document.createElement('div');
+  hidden.style.height = '0';
+  hidden.style.overflow = 'hidden';
+  document.body.appendChild(hidden);
+  window.addEventListener('scroll', () => {
+    hidden.textContent = window.scrollY;
+  });
+})
+
+
 provide("screenWidth", width);
 provide("mobileView", mobileView);
 </script>
