@@ -22,7 +22,7 @@
           <div class="flex flex-col md:flex-row items-center gap-10">
             <div
               class="standard-grid-width sm:w-64 bg-primary-200 rounded-md flex-shrink-0 border border-font-dark overflow-hidden">
-              <img src="~/assets/images/andreas_gerasimow.jpg" alt="Andreas Gerasimow" class="object-cover">
+              <img src="/andreas_gerasimow.jpg" alt="Andreas Gerasimow" class="object-cover">
             </div>
             <div class="flex flex-col items-start gap-5">
               <p>
