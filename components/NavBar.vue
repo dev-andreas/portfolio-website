@@ -1,5 +1,5 @@
 <template>
-  <nav class="sticky top-0 z-40">
+  <nav class="sticky top-0 z-40 translate-y-0">
     <NavbarPhoneNav :links="props.links" v-if="mobileView" />
   </nav>
 </template>
