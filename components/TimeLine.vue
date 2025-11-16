@@ -1,11 +1,15 @@
 <template>
   <ul class="flex flex-col gap-5 relative">
-    <div class="absolute translate-x-1.5 w-0 h-full border-l border-dashed border-font-dark z-0"></div>
+    <div class="absolute w-4 h-full z-0 flex justify-center">
+      <div class="bg-primary-200 w-0.25">
+
+      </div>
+    </div>
     <span class="h-0"></span>
     <li v-for="item, index in props.items" class="flex items-start z-10" :key="item.title" @mouseover="onHover(index)"
       @mouseleave="onLeave()" ref>
       <div class="flex items-center">
-        <div class="w-3 h-3 rounded-full border border-font-dark transition-all duration-200 ease-out translate-y-1"
+        <div class="w-4 h-4 rounded-full border border-font-dark transition-all duration-200 ease-out translate-y-1"
           :class="[index == hover ? 'bg-font-dark' : 'bg-backg-light']"></div>
       </div>
       <div class="flex flex-col gap-2 ml-4">

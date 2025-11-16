@@ -110,6 +110,9 @@ module.exports = {
       dropShadow: {
         'flat': '0.4rem 0.4rem #00000022'
       },
+      width: {
+          '0.25': '0.0625rem',
+      }
     },
   },
   plugins: [],
