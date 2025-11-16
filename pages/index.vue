@@ -141,6 +141,10 @@ import ArticleSection from "~/components/ArticleSection.vue";
 import { useArticleStore } from "~/stores/stores.js";
 import DarkModeToggle from "~/components/DarkModeToggle.vue";
 
+definePageMeta({
+  colorMode: 'light',
+})
+
 const articleStore = useArticleStore();
 onBeforeMount(() => {
   articleStore.$reset();
