@@ -4,7 +4,6 @@
       :class="{ 'bg-opacity-70': !open, 'border-backg-light dark:border-backg-dark': open, 'border-primary-300 dark:border-primary-dark-100': !scrolledToTop && !open, 'border-transparent': scrolledToTop && !open }">
       <div class="standard-grid-width flex flex-row-reverse justify-between items-center h-7">
         <div class="flex items-center justify-center">
-          <DarkModeToggle/>
           <!-- Burger -->
          <NavbarBurgerButton v-model="open" />
         </div>
