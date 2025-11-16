@@ -26,16 +26,6 @@ body {
 <script setup>
 import { useArticleStore } from "~/stores/stores.js";
 const articleStore = useArticleStore();
-const colorMode = useColorMode()
-
-useHead({
-  meta: [
-    {
-      name: 'theme-color',
-      content: '#000000'
-    }
-  ]
-})
 
 const width = ref(0);
 
