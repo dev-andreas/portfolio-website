@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center">
     <div class="grid lg:grid-cols-3 gap-10 place-items-start standard-grid-width">
-      <aside v-if="!mobileView" class="flex flex-col justify-between sticky top-0 w-full h-screen py-10">
+      <aside v-if="!mobileView" class="flex flex-col justify-between sticky top-0 w-full h-screen py-20">
         <div class="flex flex-col gap-10">
           <IntersectionAnimation startingClass="opacity-0 translate-y-3 blur-sm"
             endingClass="opacity-100 translate-y-0 blur-none">
@@ -13,16 +13,15 @@
         <FooterPart />
       </aside>
       <div class="flex flex-col col-span-2">
-        <ArticleSection header="About Me" id="top" :showHeader="false" class="pt-10">
+        <ArticleSection header="About Me" id="top" :showHeader="false" class="pt-20">
           <IntersectionAnimation v-if="mobileView" startingClass="opacity-0 -translate-x-3 blur-sm"
             endingClass="opacity-100 translate-x-0 blur-none">
             <h1 class="section-header">Andreas Gerasimow</h1>
             <h2 class="section-subheader">Computer Science Student</h2>
-
           </IntersectionAnimation>
           <div class="flex flex-col md:flex-row items-center gap-10">
             <div
-              class="standard-grid-width sm:w-64 bg-primary-200 rounded-2xl flex-shrink-0 border border-font-dark overflow-hidden">
+              class="standard-grid-width sm:w-64 bg-primary-200 dark:bg-primary-dark-200 rounded-2xl flex-shrink-0 border border-font-dark dark:border-primary-dark-100 overflow-hidden">
               <img src="/andreas_gerasimow.jpg" alt="Andreas Gerasimow" class="object-cover">
             </div>
             <div class="flex flex-col items-start gap-5">
@@ -140,6 +139,7 @@ import featureIDEThumb from "~/assets/images/external/featureide_logo.png";
 
 import ArticleSection from "~/components/ArticleSection.vue";
 import { useArticleStore } from "~/stores/stores.js";
+import DarkModeToggle from "~/components/DarkModeToggle.vue";
 
 const articleStore = useArticleStore();
 onBeforeMount(() => {

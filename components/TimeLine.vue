@@ -1,16 +1,16 @@
 <template>
   <ul class="flex flex-col gap-5 relative">
-    <div class="absolute w-4 h-full z-0 flex justify-center">
-      <div class="bg-primary-200 w-0.25">
+    <div class="absolute w-3 h-full z-0 flex justify-center">
+      <div class="bg-primary-200 dark:bg-primary-dark-200 w-0.25">
 
       </div>
     </div>
     <span class="h-0"></span>
-    <li v-for="item, index in props.items" class="flex items-start z-10" :key="item.title" @mouseover="onHover(index)"
-      @mouseleave="onLeave()" ref>
+    <li v-for="(item, index) in props.items" class="flex items-start z-10" :key="item.title" @mouseover="onHover(index)"
+      @mouseleave="onLeave()">
       <div class="flex items-center">
-        <div class="w-4 h-4 rounded-full border border-font-dark transition-all duration-200 ease-out translate-y-1"
-          :class="[index == hover ? 'bg-font-dark' : 'bg-backg-light']"></div>
+        <div class="w-3 h-3 rounded-full border border-font-dark dark:border-font-light transition-all duration-200 ease-out translate-y-1"
+          :class="[index === hover ? 'bg-font-dark dark:bg-font-light' : 'bg-backg-light dark:bg-backg-dark']"></div>
       </div>
       <div class="flex flex-col gap-2 ml-4">
         <div>
@@ -22,7 +22,7 @@
           <li v-for="detail in item.details">{{ detail }}</li>
         </ul>
         <div class="flex flex-wrap gap-2">
-          <div class=" bg-primary-100 text-primary-500 py-0.5 px-2 rounded-lg" v-for="technology in item.technologies">
+          <div class=" bg-primary-100 dark:bg-primary-dark-100 text-primary-500 dark:text-primary-dark-500 py-0.5 px-2 rounded-lg" v-for="technology in item.technologies">
             {{ technology }}</div>
         </div>
       </div>

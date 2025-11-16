@@ -1,4 +1,3 @@
-
 const siteUrl = 'https://gerasimow.de'
 
 export default defineNuxtConfig({
@@ -31,7 +30,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: [
-    '@pinia/nuxt',
-  ],
+  modules: ['@pinia/nuxt', '@nuxtjs/color-mode'],
 })
