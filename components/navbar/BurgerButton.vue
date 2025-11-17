@@ -1,7 +1,7 @@
 <template>
 
     <button
-        class="transition-colors duration-300 w-10 h-10 bg-transparent rounded-full flex items-center justify-center hover:bg-primary-200 dark:hover:bg-primary-dark-100"
+        class="transition-colors duration-300 ease-in w-10 h-10 bg-transparent rounded-full flex items-center justify-center hover:bg-primary-200 dark:hover:bg-primary-dark-100"
         @click="emit('update:modelValue', !props.modelValue)"
     >
       <div class="flex flex-col items-end justify-center gap-1">

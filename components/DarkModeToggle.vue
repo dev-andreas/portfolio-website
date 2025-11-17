@@ -16,6 +16,6 @@ const colorMode = useColorMode()
 const isDark = computed(() => colorMode.value === 'dark')
 
 const toggleDarkMode = () => {
-  colorMode.value = isDark.value ? 'light' : 'dark'
+  colorMode.preference = isDark.value ? 'light' : 'dark'
 }
 </script>
