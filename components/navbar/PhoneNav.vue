@@ -1,17 +1,19 @@
 <template>
-  <div class="flex flex-col items-end px-5 py-3 gap-3 transition-all duration-200 ease-out w-full h-0">
-    <div class="flex items-center justify-center bg-backg-light dark:bg-backg-dark rounded-full bg-opacity-50 dark:bg-opacity-50 backdrop-blur dark:backdrop-blur border"
-    :class="scrolledToTop ? 'border-transparent' : 'border-primary-300 dark:border-primary-dark-300'">
+  <div class="flex justify-center translate-x-3">
+    <div class="flex flex-col items-end py-3 gap-3 transition-all duration-200 ease-out w-full h-0 standard-grid-width">
+      <div class="flex items-center justify-center bg-backg-light dark:bg-backg-dark rounded-full bg-opacity-50 dark:bg-opacity-50 backdrop-blur dark:backdrop-blur border"
+           :class="scrolledToTop ? 'border-transparent' : 'border-primary-300 dark:border-primary-dark-300'">
         <DarkModeToggle></DarkModeToggle>
         <NavbarBurgerButton v-model="open" />
-    </div>
-    <transition name="slide-left" mode="out-in">
-      <div v-if="open">
-        <div class="flex flex-col items-stretch w-full">
-          <NavbarItemList @selected="open = false" class="p-5 rounded-3xl border border-primary-300 dark:border-primary-dark-300 bg-backg-light dark:bg-backg-dark w-64 bg-opacity-50 dark:bg-opacity-50 backdrop-blur dark:backdrop-blur"></NavbarItemList>
-        </div>
       </div>
-    </transition>
+      <transition name="slide-left" mode="out-in">
+        <div v-if="open">
+          <div class="flex flex-col items-stretch w-full">
+            <NavbarItemList @selected="open = false" class="p-5 rounded-3xl border border-primary-300 dark:border-primary-dark-300 bg-backg-light dark:bg-backg-dark w-64 bg-opacity-50 dark:bg-opacity-50 backdrop-blur dark:backdrop-blur"></NavbarItemList>
+          </div>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 

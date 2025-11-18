@@ -21,7 +21,7 @@
           </IntersectionAnimation>
           <div class="flex flex-col md:flex-row items-center gap-10">
             <div
-              class="standard-grid-width sm:w-64 bg-primary-200 dark:bg-primary-dark-200 rounded-2xl flex-shrink-0 border border-font-dark dark:border-primary-dark-100 overflow-hidden">
+              class="standard-grid-width sm:w-80 bg-primary-200 dark:bg-primary-dark-200 rounded-2xl flex-shrink-0 border border-font-dark dark:border-primary-dark-100 overflow-hidden">
               <img src="/andreas_gerasimow.jpg" alt="Andreas Gerasimow" class="object-cover">
             </div>
             <div class="flex flex-col items-start gap-5">

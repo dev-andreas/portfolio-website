@@ -38,7 +38,7 @@ body {
 }
 
 .btn-primary {
-    @apply btn font-bold border border-font-dark dark:border-primary-dark-400 rounded hover:bg-font-dark dark:hover:bg-font-light hover:text-font-light dark:hover:text-font-dark bg-backg-light dark:bg-backg-dark flat-shadow transition ease-out duration-200;
+    @apply btn font-bold border border-font-dark dark:border-primary-dark-400 dark:hover:border-font-light rounded hover:bg-font-dark dark:hover:bg-font-light hover:text-font-light dark:hover:text-font-dark bg-backg-light dark:bg-backg-dark flat-shadow-box transition ease-out duration-200;
 }
 
 .inpt {
@@ -50,12 +50,12 @@ body {
 }
 
 .standard-grid-width {
-    @apply w-72 2xs:w-80 xs:w-96 sm:w-132 md:w-168 lg:w-228 xl:w-300;
+    @apply w-64 2xs:w-72 xs:w-88 sm:w-132 md:w-168 lg:w-228 xl:w-300;
     /*2xl:w-360 */
 }
 
 .standard-grid-height {
-    @apply h-72 2xs:h-80 xs:h-96 sm:h-132 md:h-168 lg:h-228 xl:h-300;
+    @apply h-64 2xs:h-72 xs:h-88 sm:h-132 md:h-168 lg:h-228 xl:h-300;
     /*2xl:w-360 */
 }
 
