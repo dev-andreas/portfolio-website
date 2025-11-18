@@ -84,6 +84,39 @@ body {
     filter: drop-shadow(0.2rem 0.2rem var(--shadow-color));
 }
 
+.flat-shadow-sm-box {
+    @apply relative transition-all duration-200 ease-out;
+}
+
+.flat-shadow-sm-box::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* shorthand for top/right/bottom/left: 0 */
+    border-radius: inherit;
+    clip-path: inherit;
+    background: var(--shadow-color);/* your background */;
+    transform: translate(0.2rem, 0.2rem); /* shift it horizontally */
+    z-index: -1; /* place it behind */
+}
+
+
+.flat-shadow-box {
+    @apply relative transition-all duration-300 ease-out;
+}
+
+.flat-shadow-box::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* shorthand for top/right/bottom/left: 0 */
+    border-radius: inherit;
+    clip-path: inherit;
+    background: var(--shadow-color);/* your background */;
+    transform: translate(0.4rem, 0.4rem); /* shift it horizontally */
+    z-index: -1; /* place it behind */
+}
+
+
+
 /* ## Vue animations ## */
 
 .slide-top-enter-active,
@@ -121,13 +154,12 @@ body {
 
 .slide-left-enter-active,
 .slide-left-leave-active {
-    @apply transition-all ease-out duration-300;
+    @apply transition-all ease-in-out duration-300;
 }
 
 .slide-left-enter-from,
 .slide-left-leave-to {
-    transform: translateX(10px);
-    opacity: 0;
+    transform: translateX(20rem);
 }
 
 .slide-left-right {
