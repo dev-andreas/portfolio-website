@@ -13,7 +13,16 @@
 <script setup>
 const colorMode = useColorMode()
 
-const isDark = computed(() => colorMode.value === 'dark')
+const isDark = ref(false)
+
+watch(colorMode, () => {
+  isDark.value = colorMode.value === "dark"
+})
+
+onMounted(() => {
+  isDark.value = localStorage.getItem('nuxt-color-mode') === 'dark'
+  console.log(localStorage.getItem('nuxt-color-mode'))
+})
 
 const toggleDarkMode = () => {
   colorMode.preference = isDark.value ? 'light' : 'dark'

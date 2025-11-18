@@ -115,7 +115,13 @@ body {
     z-index: -1; /* place it behind */
 }
 
+.translate-full-width {
+    transform: translateX(100vw);
+}
 
+.h-almost-screen {
+    height: 90vh;
+}
 
 /* ## Vue animations ## */
 
