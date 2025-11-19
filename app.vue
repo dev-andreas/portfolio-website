@@ -6,25 +6,24 @@
   </div>
 </template>
 
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.2s ease-out;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-0.25rem);
-}
-
-body {
-  @apply bg-backg-light;
-}
-</style>
-
 <script setup>
-import { useArticleStore } from "~/stores/stores.js";
+useHead({
+  script: [
+    {
+      children: `
+        (function() {
+          const saved = localStorage.getItem('theme');
+          const system = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const isDark = saved === 'dark' || (saved === 'system' && system);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          }
+        })();
+      `,
+    }
+  ]
+});
+
 const articleStore = useArticleStore();
 
 const width = ref(0);

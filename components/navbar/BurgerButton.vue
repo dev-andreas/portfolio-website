@@ -1,8 +1,9 @@
 <template>
 
     <button
-        class="transition-colors duration-300 ease-in w-10 h-10 bg-transparent rounded-full flex items-center justify-center"
-        @click="emit('update:modelValue', !props.modelValue)"
+        class="transition-colors duration-300 ease-in w-12 h-12 rounded-full flex items-center justify-center"
+        :class="{ 'bg-primary-200 dark:bg-primary-dark-100': bg }"
+        @click="toggle"
     >
       <div class="flex flex-col items-end justify-center gap-1">
         <div class=" w-5 h-0.5 transition ease-out duration-300 transform bg-font-dark dark:bg-font-light rounded-full"
@@ -20,6 +21,16 @@
     modelValue: Boolean
   })
   const emit = defineEmits(['update:modelValue'])
+
+  const bg = ref(false)
+
+  function toggle() {
+    emit('update:modelValue', !props.modelValue);
+    bg.value = true
+    setTimeout(() => {
+      bg.value = false
+    }, 400)
+  }
 
 </script>
 

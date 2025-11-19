@@ -7,7 +7,7 @@
           <DarkModeToggle></DarkModeToggle>
           <NavbarBurgerButton v-model="open" />
         </div>
-        <Transition name="slide-left">
+        <Transition name="shift-left">
           <div v-if="open" class>
             <div class="flex flex-col items-stretch w-full">
               <NavbarItemList @selected="open = false" class="p-5 rounded-3xl border border-primary-300 dark:border-primary-dark-300 bg-backg-light dark:bg-backg-dark w-64 bg-opacity-50 dark:bg-opacity-50 backdrop-blur dark:backdrop-blur shadow-lg"></NavbarItemList>

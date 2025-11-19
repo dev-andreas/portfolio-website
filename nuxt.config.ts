@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1viewport-fit=cover',
+      viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
       title: 'Andreas Gerasimow',
       meta: [
         { property: "og:title", content: 'Portfolio from Andreas Gerasimow.' },
@@ -30,5 +30,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@pinia/nuxt', '@nuxtjs/color-mode'],
+  modules: ['@pinia/nuxt'],
 })
