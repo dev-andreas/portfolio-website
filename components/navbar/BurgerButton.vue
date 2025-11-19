@@ -1,7 +1,7 @@
 <template>
 
     <button
-        class="transition-colors duration-100 ease-in w-12 h-12 rounded-full flex items-center justify-center"
+        class="transition-colors duration-200 ease-in w-12 h-12 rounded-full flex items-center justify-center"
         :class="{ 'bg-primary-200 dark:bg-primary-dark-100': bg }"
         @click="toggle"
     >
