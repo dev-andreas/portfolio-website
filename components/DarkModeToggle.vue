@@ -1,7 +1,7 @@
 <template>
   <button
     @click="click"
-    class="transition-colors duration-200 w-12 h-12 rounded-full flex items-center justify-center"
+    class="transition-colors duration-300 w-12 h-12 rounded-full flex items-center justify-center"
     :class="{ 'bg-primary-200 dark:bg-primary-dark-100': bg }"
   >
     <ClientOnly fallbackTag="div">
