@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center w-full">
-    <div class="flex justify-center w-full overflow-hidden py-3">
+  <div class="flex justify-center w-full h-0">
+    <div class="flex justify-center w-full py-3">
       <div class="flex flex-col items-end gap-3 transition-all duration-200 ease-out standard-grid-width translate-x-3">
         <div class="flex items-center justify-center bg-backg-light dark:bg-backg-dark rounded-full bg-opacity-50 dark:bg-opacity-50 backdrop-blur dark:backdrop-blur border"
              :class="scrolledToTop ? 'border-transparent' : 'border-primary-300 dark:border-primary-dark-300'">
