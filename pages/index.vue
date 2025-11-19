@@ -15,7 +15,7 @@
       <div class="flex flex-col col-span-2">
         <ArticleSection header="About Me" id="top" :showHeader="false" class="pt-20">
           <IntersectionAnimation v-if="mobileView" startingClass="opacity-0 -translate-x-3 blur-sm"
-            endingClass="opacity-100 translate-x-0 blur-none" class="mt-20">
+            endingClass="opacity-100 translate-x-0 blur-none" class="mt-10">
             <h1 class="section-header">Andreas Gerasimow</h1>
             <h2 class="section-subheader">Computer Science Student</h2>
           </IntersectionAnimation>
