@@ -1,11 +1,11 @@
 <template>
 
     <button
-        class="transition-colors duration-300 ease-in w-12 h-12 rounded-full flex items-center justify-center"
+        class="transition-colors duration-100 ease-in w-12 h-12 rounded-full flex items-center justify-center"
         :class="{ 'bg-primary-200 dark:bg-primary-dark-100': bg }"
         @click="toggle"
     >
-      <div class="flex flex-col items-end justify-center gap-1">
+      <div class="flex flex-col items-end justify-center gap-1 transition-colors duration-300">
         <div class=" w-5 h-0.5 transition ease-out duration-300 transform bg-font-dark dark:bg-font-light rounded-full"
              :class="[props.modelValue ? '-rotate-45 translate-y-1.5' : 'rotate-0']"></div>
         <div class="w-3 h-0.5 transition ease-out duration-300 rounded-full"
