@@ -50,6 +50,11 @@ export function useColorMode() {
 
         // initialization
         localStorage.setItem("theme", theme.value)
+        if (isDarkTheme.value) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
     }
 
     return { isDarkTheme, setSystemTheme, toggleTheme }

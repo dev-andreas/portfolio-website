@@ -14,7 +14,7 @@ useHead({
         (function() {
           const saved = localStorage.getItem('theme');
           const system = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const isDark = saved === 'dark' || (saved === 'system' && system);
+          const isDark = saved === 'dark' || ((saved === 'system' || saved == null) && system);
           if (isDark) {
             document.documentElement.classList.add('dark');
           }
