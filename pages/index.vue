@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center">
     <div class="grid lg:grid-cols-3 gap-10 place-items-start standard-grid-width">
-      <aside v-if="!mobileView" class="flex flex-col justify-between sticky top-0 w-full h-screen py-20">
+      <aside class="hidden lg:flex flex-col justify-between sticky top-0 w-full h-screen py-20">
         <div class="flex flex-col gap-10">
           <IntersectionAnimation startingClass="opacity-0 translate-y-3 blur-sm"
             endingClass="opacity-100 translate-y-0 blur-none">
@@ -14,8 +14,8 @@
       </aside>
       <div class="flex flex-col col-span-2">
         <ArticleSection header="About Me" id="top" :showHeader="false" class="pt-20">
-          <IntersectionAnimation v-if="mobileView" startingClass="opacity-0 -translate-x-3 blur-sm"
-            endingClass="opacity-100 translate-x-0 blur-none" class="mt-10">
+          <IntersectionAnimation startingClass="opacity-0 -translate-x-3 blur-sm"
+            endingClass="opacity-100 translate-x-0 blur-none" class="block lg:hidden mt-10">
             <h1 class="section-header">Andreas Gerasimow</h1>
             <h2 class="section-subheader">Computer Science Student</h2>
           </IntersectionAnimation>
@@ -145,5 +145,4 @@ const articleStore = useArticleStore();
 onBeforeMount(() => {
   articleStore.$reset();
 });
-const mobileView = inject("mobileView");
 </script>
