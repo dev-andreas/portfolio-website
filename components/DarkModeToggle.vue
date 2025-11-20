@@ -19,10 +19,6 @@ const { isDarkTheme, toggleTheme } = useColorMode()
 
 const bg = ref(false)
 
-onMounted(() => {
-  console.log(isDarkTheme.value)
-})
-
 function click() {
   toggleTheme()
   bg.value = true
