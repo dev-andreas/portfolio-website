@@ -3,7 +3,7 @@
     <li
         v-for="theme in themes"
         :key="theme"
-        :class="{'bg-primary-400/10 dark:bg-primary-dark-300/10': theme === getTheme()}"
+        :class="{'bg-primary-400/20 dark:bg-primary-dark-300/20': theme === getTheme()}"
         class="flex gap-3 items-center relative cursor-pointer p-2 rounded-lg"
         @click.prevent="emit('selected'); setTheme(theme)"
     >
