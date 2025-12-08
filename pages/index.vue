@@ -8,7 +8,7 @@
             <h1 class="section-header">Andreas Gerasimow</h1>
             <h2 class="section-subheader">Computer Science Student</h2>
           </IntersectionAnimation>
-          <NavbarItemList></NavbarItemList>
+          <NavbarItemList class="flex flex-col gap-2"></NavbarItemList>
         </div>
         <FooterPart />
       </aside>
@@ -139,7 +139,6 @@ import featureIDEThumb from "~/assets/images/external/featureide_logo.png";
 
 import ArticleSection from "~/components/ArticleSection.vue";
 import { useArticleStore } from "~/stores/stores.js";
-import DarkModeToggle from "~/components/DarkModeToggle.vue";
 
 const articleStore = useArticleStore();
 onBeforeMount(() => {

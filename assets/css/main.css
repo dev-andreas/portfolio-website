@@ -63,9 +63,8 @@ body {
     @apply px-4 py-1 border-b border-font-dark dark:border-font-light flex flex-col items-center justify-center gap-1 font-bold relative hover:-translate-y-1 transition ease-out duration-200;
 }
 
-.bgg {
-    background-image: url("~/assets/images/diagonal_line.svg");
-    background-size: 1.5rem;
+.menu-surface {
+    @apply flex flex-col p-5 rounded-3xl border border-primary-300 dark:border-primary-dark-300 bg-backg-light dark:bg-backg-dark bg-opacity-50 dark:bg-opacity-50 backdrop-blur dark:backdrop-blur shadow-lg;
 }
 
 :root {
@@ -171,7 +170,7 @@ body {
 
 .shift-left-enter-active,
 .shift-left-leave-active {
-    @apply transition-all ease-in-out duration-300;
+    @apply transition-all ease-in-out duration-200;
 }
 
 .shift-left-enter-from,
@@ -206,8 +205,4 @@ body {
     100% {
         transform: translateX(-5px);
     }
-}
-
-.grecaptcha-badge {
-    visibility: hidden;
 }

@@ -1,61 +1,69 @@
-const DARK = "dark"
-const LIGHT = "light"
-const SYSTEM = "system"
-
 export function useColorMode() {
+    const ThemeType = {
+        LIGHT: "light",
+        DARK: "dark",
+        SYSTEM: "system"
+    };
+
+    // 1. USE STATE: Unique key 'color-mode' ensures state is shared across components
+    // but isolated per user request on the server.
+    const theme = useState('color-mode', () => ThemeType.SYSTEM)
+
+    // Note: Ensure useSystemTheme is safe to run on server or wrap in checks
     const systemTheme = useSystemTheme()
-    const theme = ref(SYSTEM)
 
     const isDarkTheme = computed(() => {
+        // Guard against server-side execution if systemTheme relies on window
+        if (process.server && !systemTheme.value) return false
+
         const isDark = systemTheme.isDark
         switch (theme.value) {
-            case DARK:
+            case ThemeType.DARK:
                 return true
-            case LIGHT:
+            case ThemeType.LIGHT:
                 return false
             default:
                 return isDark.value
         }
     })
-    const setSystemTheme = () => {
-        theme.value = SYSTEM
+
+    const setTheme = (newTheme) => {
+        theme.value = newTheme
     }
 
     const toggleTheme = () => {
-        theme.value = isDarkTheme.value ? LIGHT : DARK
+        theme.value = isDarkTheme.value ? ThemeType.LIGHT : ThemeType.DARK
     }
 
-    if (process.client) {
-        watch(isDarkTheme, (value) => {
-            if (value) {
+    // 2. DOM MANIPULATION: strictly client-side
+    // We use onMounted to handle the initial LocalStorage read to avoid Hydration Mismatches
+    onMounted(() => {
+        // Initialize from LocalStorage
+        const lsTheme = localStorage.getItem("theme")
+        if (lsTheme && Object.values(ThemeType).includes(lsTheme)) {
+            theme.value = lsTheme
+        }
+
+        // Watch for changes to update DOM and LocalStorage
+        watch(isDarkTheme, (isDark) => {
+            if (isDark) {
                 document.documentElement.classList.add('dark')
             } else {
                 document.documentElement.classList.remove('dark')
             }
-        })
-        watch(theme, (value) => {
-            localStorage.setItem("theme", value)
-        })
-        const lsTheme = localStorage.getItem("theme")
-        switch (lsTheme) {
-            case DARK:
-                theme.value = DARK
-                break
-            case LIGHT:
-                theme.value = LIGHT
-                break
-            default:
-                theme.value = SYSTEM
-        }
+        }, { immediate: true })
 
-        // initialization
-        localStorage.setItem("theme", theme.value)
-        if (isDarkTheme.value) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
+        watch(theme, (val) => {
+            localStorage.setItem("theme", val)
+        })
+    })
+
+    return {
+        isDarkTheme,
+        toggleTheme,
+        getTheme: () => theme.value, // Simple getter
+        setTheme,
+        ThemeType,
+        theme
     }
-
-    return { isDarkTheme, setSystemTheme, toggleTheme }
 }

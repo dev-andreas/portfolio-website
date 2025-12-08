@@ -2,7 +2,7 @@
   <button
     @click="click"
     class="transition-colors duration-300 w-12 h-12 rounded-full flex items-center justify-center"
-    :class="{ 'bg-primary-200 dark:bg-primary-dark-100': bg }"
+    :class="{ 'bg-primary-200 dark:bg-primary-dark-100': props.modelValue }"
   >
     <ClientOnly fallbackTag="div">
       <transition name="fade" mode="out-in">
@@ -15,15 +15,13 @@
 </template>
 
 <script setup>
-const { isDarkTheme, toggleTheme } = useColorMode()
-
-const bg = ref(false)
+const { isDarkTheme } = useColorMode()
+const props = defineProps({
+  modelValue: Boolean
+})
+const emit = defineEmits(['update:modelValue'])
 
 function click() {
-  toggleTheme()
-  bg.value = true
-  setTimeout(() => {
-    bg.value = false
-  }, 600)
+  emit('update:modelValue', !props.modelValue);
 }
 </script>
