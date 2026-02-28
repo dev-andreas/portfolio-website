@@ -27,7 +27,7 @@
             <div class="flex flex-col items-start gap-5">
               <p>
                 Hi, I’m Andreas, a graduate computer science student at Ulm University with a specialization in
-                cybersecurity. Alongside my studies, I work as a working student at eXXcelent solutions, where I
+                cybersecurity. Alongside my studies, I work as a working student at eXXcellent solutions, where I
                 contribute to the development of easySSP, a modeling and simulation software. My role spans
                 full-stack development with Java and React.
               </p>
@@ -42,7 +42,7 @@
           <TimeLine :items="[
             {
               title: 'Working Student - Software Development',
-              institution: 'eXXcelent solutions',
+              institution: 'eXXcellent solutions',
               time: 'Aug 2025 - present',
               details: ['Full-stack development for the modeling and simulation software easySSP.'],
               image: '',
