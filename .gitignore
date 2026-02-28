@@ -2,6 +2,7 @@ node_modules
 .nuxt
 .output
 package-lock.json
+.idea
 
 # dotenv environment variables file
 .env
