@@ -18,7 +18,7 @@
           <p><b>{{ item.institution }}</b></p>
           <p><i>{{ item.title }}</i></p>
         </div>
-        <ul class="list-disc list-outside ml-4" v-if="item.details.length > 0">
+        <ul v-if="item.details.length > 0">
           <li v-for="detail in item.details">{{ detail }}</li>
         </ul>
         <div class="flex flex-wrap gap-2">
