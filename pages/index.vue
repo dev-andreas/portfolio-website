@@ -26,13 +26,13 @@
             </div>
             <div class="flex flex-col items-start gap-5">
               <p>
-                Hi, I’m Andreas, a graduate computer science student at Ulm University with a specialization in
-                cybersecurity. Alongside my studies, I work as a working student at eXXcellent solutions, where I
+                Hi, I’m Andreas, a graduate computer science student at Ulm University.
+                Alongside my studies, I work as a working student at eXXcellent solutions, where I
                 contribute to the development of easySSP, a modeling and simulation software. My role spans
                 full-stack development with Java and React.
               </p>
-              <ExternalButton href="mailto:andreas@gerasimow.de" icon="mail" class="w-auto">
-                andreas@gerasimow.de
+              <ExternalButton href="https://www.linkedin.com/in/andreas-gerasimow/" class="w-auto">
+                My LinkedIn Profile
               </ExternalButton>
             </div>
           </div>
@@ -44,15 +44,21 @@
               title: 'Working Student - Software Development',
               institution: 'eXXcellent solutions',
               time: 'Aug 2025 - present',
-              details: ['Full-stack development for the modeling and simulation software easySSP.'],
+              details: [
+                'Full-stack development for the modeling and simulation software easySSP using React and the Java framework Dropwizard in an agile team of 7 developers.',
+                'Enhanced the software by implementing and testing features, resolving bugs, and optimizing performance.'
+              ],
               image: '',
-              technologies: ['Java', 'Dropwizard', 'React', 'Node.js', 'Docker']
+              technologies: ['Java', 'Dropwizard', 'React', 'JavaScript']
             },
             {
               title: 'Student Assistant',
               institution: 'Ulm University',
               time: 'Nov 2023 - Aug 2024',
-              details: ['Collaborated on the FeatureIDE framework and the FeatJAR library for feature-oriented software development. Both projects are open-source and available on GitHub.'],
+              details: [
+                'Debugged and overhauled the command line interface (CLI) and other components of the FeatureIDE framework and the FeatJAR library.',
+                'Both projects are open-source, written in Java, and available on GitHub.'
+              ],
               image: '',
               technologies: ['Java']
             },
@@ -60,7 +66,10 @@
               title: 'Working Student - Software Development',
               institution: 'PERI',
               time: 'Sep 2022 - Oct 2023',
-              details: ['Improved the company’s internal information systems in an agile team.'],
+              details: [
+                  'Implemented web application interfaces for automatic data transmission in production halls using PHP, JavaScript, and SQL, which improved the quality control in production.',
+                  'Contributed to the company’s internal information systems in an agile team of 4 developers.'
+              ],
               image: '',
               technologies: ['Vue.js', 'MySQL', 'PHP']
             },
@@ -68,7 +77,7 @@
               title: 'Freelancer',
               institution: 'self-employed',
               time: 'Aug 2021 - Aug 2022',
-              details: ['Developed and maintained a website for the start-up ultraTEC Innovation GmbH.'],
+              details: ['Developed and maintained a website for the start-up ultraTEC Innovation GmbH using Vue.js.'],
               image: '',
               technologies: ['Nuxt.js', 'Vue.js', 'Tailwind CSS']
             }
@@ -81,30 +90,23 @@
               title: 'Computer Science, Master of Science',
               institution: 'Ulm University',
               time: 'June 2025 - present',
-              details: '',
+              details: ['Scholarship: Deutschlandstipendium'],
               image: ''
             },
             {
               title: 'Computer Science, Master of Science (Exchange Year)',
               institution: 'University of Massachusetts Amherst',
               time: 'Sep 2024 - May 2025',
-              details: '',
+              details: ['Scholarship: Baden-Württemberg-STIPENDIUM'],
               image: ''
             },
             {
               title: 'Computer Science, Bachelor of Science',
               institution: 'Ulm University',
               time: 'Sep 2021 - Aug 2024',
-              details: ['Thesis Title: LoRa for localization in outdoor scenarios'],
+              details: ['Grade: 1.2 (German grading scale: 1.0 best – 5.0 failing)'],
               image: ''
             },
-            {
-              title: 'Abitur',
-              institution: 'Kilian-von-Steiner Schule',
-              time: 'Sep 2018 - Jun 2021',
-              details: [],
-              image: ''
-            }
           ]"></TimeLine>
         </ArticleSection>
 
