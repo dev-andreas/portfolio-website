@@ -16,7 +16,7 @@
         <div>
           <p class="text-highlight">{{ item.time }}</p>
           <p><b class="text-highlight">{{ item.institution }}</b></p>
-          <p><i class="text-highlight">{{ item.title }}</i></p>
+          <p class="text-highlight">{{ item.title }}</p>
         </div>
         <ul v-if="item.details.length > 0">
           <li v-for="detail in item.details">{{ detail }}</li>
