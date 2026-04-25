@@ -41,7 +41,7 @@
         <ArticleSection header="Experience" id="experience" class="">
           <TimeLine :items="[
             {
-              title: 'Working Student - Software Development',
+              title: 'Working Student',
               institution: 'eXXcellent solutions',
               time: 'Aug 2025 - present',
               details: [
@@ -61,7 +61,7 @@
               technologies: ['Java']
             },
             {
-              title: 'Working Student - Software Development',
+              title: 'Working Student',
               institution: 'PERI',
               time: 'Sep 2022 - Oct 2023',
               details: [
