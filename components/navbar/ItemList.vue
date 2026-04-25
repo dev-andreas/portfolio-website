@@ -5,8 +5,8 @@
                 class="absolute bg-font-dark dark:bg-font-light w-1 h-1 rounded-full transition ease-out duration-200">
             </div>
             <a :href="'#' + section.id" @click.prevent="emit('selected'); goToId(section.id);"
-                :class="section.id === articleStore.getLowestSectionId ? 'text-font-dark font-bold translate-x-4' : 'hover:text-primary-500'"
-                class="transition ease-out duration-200">{{ section.name }}</a>
+                :class="section.id === articleStore.getLowestSectionId ? 'font-bold translate-x-4' : 'hover:text-primary-500'"
+                class="transition ease-out duration-200 text-highlight">{{ section.name }}</a>
         </li>
     </ul>
 </template>
