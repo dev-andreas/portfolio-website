@@ -25,7 +25,7 @@
               <img src="/andreas_gerasimow.jpg" alt="Andreas Gerasimow" class="object-cover">
             </div>
             <div class="flex flex-col items-start gap-5">
-              <p>
+              <p class="text-highlight">
                 Hi, I’m Andreas, a graduate computer science student at Ulm University.
                 Alongside my studies, I work as a working student at eXXcellent solutions, where I
                 contribute to the development of easySSP, a modeling and simulation software. My role spans
