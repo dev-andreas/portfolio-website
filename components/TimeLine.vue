@@ -14,12 +14,12 @@
       </div>
       <div class="flex flex-col gap-2 ml-4">
         <div>
-          <p class="text-highlight">{{ item.time }}</p>
-          <p><b class="text-highlight">{{ item.institution }}</b></p>
-          <p class="text-highlight">{{ item.title }}</p>
+          <p>{{ item.time }}</p>
+          <p><b>{{ item.institution }}</b></p>
+          <p>{{ item.title }}</p>
         </div>
         <ul v-if="item.details.length > 0">
-          <li v-for="detail in item.details">{{ detail }}</li>
+          <li class="text-font-dimmed-dark dark:text-font-dimmed-light" v-for="detail in item.details">{{ detail }}</li>
         </ul>
         <div class="flex flex-wrap gap-2">
           <div class=" bg-primary-200 dark:bg-primary-dark-100 text-primary-600 dark:text-primary-dark-500 py-0.5 px-2 rounded-lg" v-for="technology in item.technologies">

@@ -10,7 +10,7 @@
       <SvgpathsSunSvg v-if="theme === ThemeType.LIGHT" class="fill-font-dark dark:fill-font-light w-4 h-4 opacity-95" />
       <SvgpathsMoonSvg v-else-if="theme === ThemeType.DARK" class="fill-font-dark dark:fill-font-light w-4 h-4 opacity-95" />
       <SvgpathsComputerDesktopSvg v-else class="fill-font-dark dark:fill-font-light w-4 h-4 opacity-95" />
-      <p class="text-highlight">{{ toTitle(theme) }}</p>
+      <p>{{ toTitle(theme) }}</p>
     </li>
   </ul>
 </template>

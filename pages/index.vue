@@ -5,7 +5,7 @@
         <div class="flex flex-col gap-10">
           <IntersectionAnimation startingClass="opacity-0 translate-y-3 blur-sm"
             endingClass="opacity-100 translate-y-0 blur-none">
-            <h1 class="section-header">Andreas Gerasimow</h1>
+            <h1 class="page-title">Andreas Gerasimow</h1>
             <h2 class="section-subheader">Computer Science Student</h2>
           </IntersectionAnimation>
           <NavbarItemList class="flex flex-col gap-2"></NavbarItemList>
@@ -16,7 +16,7 @@
         <ArticleSection header="About Me" id="top" :showHeader="false" class="pt-20">
           <IntersectionAnimation startingClass="opacity-0 -translate-x-3 blur-sm"
             endingClass="opacity-100 translate-x-0 blur-none" class="block lg:hidden mt-10">
-            <h1 class="section-header">Andreas Gerasimow</h1>
+            <h1 class="page-title">Andreas Gerasimow</h1>
             <h2 class="section-subheader">Computer Science Student</h2>
           </IntersectionAnimation>
           <div class="flex flex-col md:flex-row items-center gap-10">
@@ -25,7 +25,7 @@
               <img src="/andreas_gerasimow.jpg" alt="Andreas Gerasimow" class="object-cover">
             </div>
             <div class="flex flex-col items-start gap-5">
-              <p class="text-highlight">
+              <p>
                 Hi, I’m Andreas, a graduate computer science student at Ulm University.
                 Alongside my studies, I work as a working student at eXXcellent solutions, where I
                 contribute to the development of easySSP, a modeling and simulation software. My role spans

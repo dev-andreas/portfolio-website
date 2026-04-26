@@ -43,6 +43,10 @@ module.exports = {
         font: {
           light: '#f6f3eb',
           dark: '#4e4b44',
+        },
+        'font-dimmed': {
+            light: '#bab7b0',
+            dark: '#726f68',
         }
       },
       scale: {
