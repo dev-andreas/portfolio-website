@@ -45,7 +45,7 @@
               institution: 'eXXcellent solutions',
               time: 'Aug 2025 - present',
               details: [
-                'Full-stack development for the modeling and simulation software easySSP using React and the Java framework Dropwizard in an agile team of 7 developers. Enhanced the software by implementing and testing features, resolving bugs, and optimizing performance.'
+                'Full-stack development for easySSP, a cloud-based modeling and simulation platform built on open standards (SSP, FMI), used across the automotive and aerospace industries. Implemented and tested features using React and the Java framework Dropwizard, resolving bugs and optimizing performance.'
               ],
               image: '',
               technologies: ['Java', 'Dropwizard', 'React', 'JavaScript']
@@ -65,7 +65,7 @@
               institution: 'PERI',
               time: 'Sep 2022 - Oct 2023',
               details: [
-                  'Implemented web application interfaces for automatic data transmission in production halls using PHP, JavaScript, and SQL, which improved the quality control in production. Contributed to the company’s internal information systems in an agile team of 4 developers.'
+                  'Contributed to the company’s internal information systems by implementing interfaces for automatic data transmission in production halls using PHP, JavaScript, and SQL, which improved quality control in production.'
               ],
               image: '',
               technologies: ['Vue.js', 'MySQL', 'PHP']
