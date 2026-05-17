@@ -4,7 +4,7 @@
       <p class="font-bold">{{ props.title }}</p>
       <p>Authors: {{ props.authors }}</p>
       <ExternalButton :href="href">
-        View Publication
+        View Paper
       </ExternalButton>
     </div>
   </div>

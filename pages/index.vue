@@ -111,23 +111,25 @@
           <PublicationBox
               title="A Mountain-Bike-to-Hiker Warning System (MBHWS)"
               authors="Max Hörmann, Andreas Gerasimow, Marcus Marx, Michele Zucchelli, Michele Segata, Frank Kargl"
-              href="https://ieeexplore.ieee.org/abstract/document/11501785"
+              href="https://opendl.ifip-tc6.org/db/conf/wons/wons2026/1571226742.pdf"
           />
-          <ProjectBox :src="travelBlogThumb">
-            My travel blog where I share my experiences and recommendations for the places that I have
-            visited.
-            <ExternalButton href="https://blog.gerasimow.de" alt="Travel Blog Logo">
-              Travel Blog
-            </ExternalButton>
-          </ProjectBox>
-          <ProjectBox :src="featureIDEThumb" alt="FeatureIDE Logo">
-            An extensible framework and libraries for feature-oriented software development.
-            <div class="flex flex-wrap gap-3">
-              <ExternalButton href="https://github.com/FeatureIDE/FeatureIDE">
-                FeatureIDE
-              </ExternalButton>
-            </div>
-          </ProjectBox>
+          <ProjectBox
+              :src="travelBlogThumb"
+              alt="Travel Blog Logo"
+              title="Travel Blog"
+              description="My travel blog where I share my experiences and recommendations for the places that I have
+                visited."
+              href="https://blog.gerasimow.de"
+              buttonName="View Blog"
+          />
+          <ProjectBox
+              :src="featureIDEThumb"
+              alt="FeatureIDE Logo"
+              title="FeatureIDE"
+              description="An extensible framework and libraries for feature-oriented software development."
+              href="https://github.com/FeatureIDE/FeatureIDE"
+              buttonName="View GitHub Repo"
+          />
         </ArticleSection>
       </div>
     </div>
@@ -137,7 +139,6 @@
 <script setup>
 import travelBlogThumb from "~/assets/images/travel_blog_thumb.jpeg";
 import featureIDEThumb from "~/assets/images/external/featureide_logo.png";
-import hewsThumb from "~/assets/images/external/hews_logo.png";
 
 import ArticleSection from "~/components/ArticleSection.vue";
 import { useArticleStore } from "~/stores/stores.js";
