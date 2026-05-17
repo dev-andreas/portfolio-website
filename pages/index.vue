@@ -107,24 +107,26 @@
           ]"></TimeLine>
         </ArticleSection>
 
-        <ArticleSection header="Projects & Contributions" id="projects_and_contributions">
+        <ArticleSection header="Projects & Publications" id="projects_and_publications">
+          <PublicationBox
+              title="A Mountain-Bike-to-Hiker Warning System (MBHWS)"
+              authors="Max Hörmann, Andreas Gerasimow, Marcus Marx, Michele Zucchelli, Michele Segata, Frank Kargl"
+              href="https://ieeexplore.ieee.org/abstract/document/11501785"
+          />
           <ProjectBox :src="travelBlogThumb">
+            My travel blog where I share my experiences and recommendations for the places that I have
+            visited.
             <ExternalButton href="https://blog.gerasimow.de" alt="Travel Blog Logo">
               Travel Blog
             </ExternalButton>
-            My travel blog where I share my experiences and recommendations for the places that I have
-            visited.
           </ProjectBox>
           <ProjectBox :src="featureIDEThumb" alt="FeatureIDE Logo">
+            An extensible framework and libraries for feature-oriented software development.
             <div class="flex flex-wrap gap-3">
               <ExternalButton href="https://github.com/FeatureIDE/FeatureIDE">
                 FeatureIDE
               </ExternalButton>
-              <ExternalButton href="https://github.com/FeatureIDE/FeatJAR">
-                FeatJAR
-              </ExternalButton>
             </div>
-            An extensible framework and libraries for feature-oriented software development.
           </ProjectBox>
         </ArticleSection>
       </div>
@@ -135,9 +137,11 @@
 <script setup>
 import travelBlogThumb from "~/assets/images/travel_blog_thumb.jpeg";
 import featureIDEThumb from "~/assets/images/external/featureide_logo.png";
+import hewsThumb from "~/assets/images/external/hews_logo.png";
 
 import ArticleSection from "~/components/ArticleSection.vue";
 import { useArticleStore } from "~/stores/stores.js";
+import PublicationBox from "~/components/PublicationBox.vue";
 
 const articleStore = useArticleStore();
 onBeforeMount(() => {
