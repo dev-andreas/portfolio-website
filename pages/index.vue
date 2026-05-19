@@ -94,7 +94,7 @@
               title: 'Computer Science, Master of Science (Exchange Year)',
               institution: 'University of Massachusetts Amherst',
               time: 'Sep 2024 - May 2025',
-              details: ['Scholarship: Baden-Württemberg-STIPENDIUM'],
+              details: ['Scholarship: Baden-Württemberg-Stipendium'],
               image: ''
             },
             {
